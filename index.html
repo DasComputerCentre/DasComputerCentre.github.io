@@ -7,6 +7,27 @@
 <title>Das Computer Centre - Rules & Regulations</title>
 
 <style>
+    .popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    background:white;
+    width:90%;
+    max-width:1000px;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
 body{
     margin:0;
     padding:0;
@@ -25,15 +46,18 @@ body{
     position:relative;
     overflow:hidden;
 }
+    .container{
+        <img src="logo.jpg" class="watermark">
+        }
 
 .watermark{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:500px;
-    opacity:0.08;
-    z-index:0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    opacity: 0.08;
+    z-index: -1;
 }
 
 .content{
@@ -68,21 +92,24 @@ h2{
 }
 
 </style>
+    <script>
+function closePopup(){
+    document.getElementById("rulesPopup").style.display="none";
+}
+</script>
 </head>
 
 <body>
 
-<div class="popup">
+<div id="rulesPopup" class="popup">
+    <div class="popup-content">
+        <h2>Rules & Regulations</h2>
 
-<img src="logo.jpg" class="watermark">
+        <img src="rules.png" width="100%">
 
-<div class="content">
-
-<h1>Das Computer Centre</h1>
-
-<h2>Rules & Regulations / নিয়মাবলী</h2>
-
-<img src="rules.png" class="rules-image">
+        <button onclick="closePopup()">I Accept / আমি সম্মত</button>
+    </div>
+</div>
 
 <div class="footer">
 Saratpalli | ESTD: 2018
@@ -90,6 +117,13 @@ Saratpalli | ESTD: 2018
 
 </div>
 </div>
+    <nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Gallery</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
 
 </body>
 </html>
