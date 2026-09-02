@@ -1,10 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
-    <title>Das Computer Centre</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Das Computer Centre - Rules & Regulations</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:#f4f4f4;
+    font-family:Arial,sans-serif;
+}
+
+.popup{
+    width:95%;
+    max-width:1100px;
+    margin:20px auto;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.watermark{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:500px;
+    opacity:0.08;
+    z-index:0;
+}
+
+.content{
+    position:relative;
+    z-index:1;
+}
+
+h1{
+    text-align:center;
+    color:#003399;
+    margin-bottom:10px;
+}
+
+h2{
+    text-align:center;
+    color:#444;
+    margin-top:0;
+}
+
+.rules-image{
+    width:100%;
+    border-radius:10px;
+    border:2px solid #ddd;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:#003399;
+}
+
+</style>
 </head>
+
 <body>
-    <h1>Welcome to Das Computer Centre</h1>
-    <p>Computer Training & Services</p>
+
+<div class="popup">
+
+<img src="logo.jpg" class="watermark">
+
+<div class="content">
+
+<h1>Das Computer Centre</h1>
+
+<h2>Rules & Regulations / নিয়মাবলী</h2>
+
+<img src="rules.png" class="rules-image">
+
+<div class="footer">
+Saratpalli | ESTD: 2018
+</div>
+
+</div>
+</div>
+
 </body>
 </html>
