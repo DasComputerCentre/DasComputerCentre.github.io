@@ -7,119 +7,175 @@
 <title>Das Computer Centre - Rules & Regulations</title>
 
 <style>
-    .popup{
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#000428,#004e92);
+    color:white;
+    min-height:100vh;
+}
+
+body::before{
+    content:"";
     position:fixed;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.7);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
+    background:url('logo.jpg') center center no-repeat;
+    background-size:350px;
+    opacity:0.05;
+    pointer-events:none;
 }
 
-.popup-content{
-    background:white;
-    width:90%;
-    max-width:1000px;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-}
-body{
-    margin:0;
-    padding:0;
-    background:#f4f4f4;
-    font-family:Arial,sans-serif;
-}
-
-.popup{
+.container{
     width:95%;
-    max-width:1100px;
-    margin:20px auto;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    max-width:1200px;
+    margin:auto;
     padding:20px;
-    position:relative;
-    overflow:hidden;
-}
-    .container{
-        <img src="logo.jpg" class="watermark">
-        }
-
-.watermark{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    opacity: 0.08;
-    z-index: -1;
 }
 
-.content{
-    position:relative;
-    z-index:1;
-}
-
-h1{
+.header{
     text-align:center;
-    color:#003399;
-    margin-bottom:10px;
+    margin-bottom:25px;
 }
 
-h2{
+.header h1{
+    color:#00ffff;
+    font-size:42px;
+    text-shadow:0 0 15px #00ffff;
+}
+
+.header p{
+    color:#ddd;
+    margin-top:10px;
+}
+
+.rules-box{
+    background:rgba(255,255,255,0.08);
+    border:1px solid #00ffff;
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 25px rgba(0,255,255,0.35);
+}
+
+.section{
+    margin-bottom:30px;
+}
+
+.section h2{
+    color:#00ffff;
+    border-bottom:2px solid #00ffff;
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+.section p,
+.section li{
+    line-height:1.8;
+}
+
+.accept{
     text-align:center;
-    color:#444;
-    margin-top:0;
+    margin:30px 0;
 }
 
-.rules-image{
-    width:100%;
+.accept label{
+    font-size:18px;
+}
+
+#acceptBtn{
+    margin-top:20px;
+    padding:15px 40px;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
     border-radius:10px;
-    border:2px solid #ddd;
+    background:#00ffff;
+    color:black;
+    cursor:pointer;
+    box-shadow:0 0 20px #00ffff;
+}
+
+#acceptBtn:disabled{
+    background:gray;
+    color:white;
+    cursor:not-allowed;
+    box-shadow:none;
 }
 
 .footer{
     text-align:center;
-    margin-top:20px;
-    font-size:18px;
-    font-weight:bold;
-    color:#003399;
+    color:#ddd;
+    padding:20px;
 }
 
 </style>
-    <script>
-function closePopup(){
-    document.getElementById("rulesPopup").style.display="none";
-}
-</script>
 </head>
 
 <body>
 
-<div id="rulesPopup" class="popup">
-    <div class="popup-content">
-        <h2>Rules & Regulations</h2>
+<div class="container">
 
-        <img src="rules.png" width="100%">
+<div class="header">
+    <h1>💻 DAS COMPUTER CENTRE</h1>
+    <p>Saratpalli | ESTD: 2018</p>
+    <h3>Rules & Regulations</h3>
+</div>
 
-        <a href="home.html">
-    <button>I Accept / আমি সম্মত</button>
-</a>
-    </div>
+<div class="rules-box">
+
+    <p style="text-align:center;">
+        নিচের সমস্ত নিয়মাবলী মনোযোগ সহকারে পড়ুন।
+    </p>
+
+    <!-- এখানে তোমার সম্পূর্ণ Rules Section বসবে -->
+
+</div>
+
+<div class="accept">
+
+    <input type="checkbox" id="agree">
+
+    <label for="agree">
+        আমি সমস্ত নিয়মাবলী পড়েছি এবং মেনে চলতে সম্মত আছি।
+    </label>
+
+    <br>
+
+    <button id="acceptBtn" disabled>
+        ✅ I ACCEPT
+    </button>
+
 </div>
 
 <div class="footer">
-Saratpalli | ESTD: 2018
+    Das Computer Centre © 2026
 </div>
 
 </div>
-</div>
-    
+
+<script>
+
+const agree=document.getElementById("agree");
+const btn=document.getElementById("acceptBtn");
+
+agree.addEventListener("change",function(){
+    btn.disabled=!this.checked;
+});
+
+btn.addEventListener("click",function(){
+    window.location.href="home.html";
+});
+
+</script>
 
 </body>
 </html>
