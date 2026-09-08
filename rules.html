@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Das Computer Centre - Rules</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#000428,#004e92);
+    color:white;
+    min-height:100vh;
+}
+
+.header{
+    text-align:center;
+    padding:30px 15px;
+}
+
+.header h1{
+    color:#00ffff;
+    font-size:40px;
+    text-shadow:0 0 15px #00ffff;
+}
+
+.header h2{
+    margin-top:10px;
+    color:#ffffff;
+}
+
+.rules-box{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    border:1px solid #00ffff;
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 25px rgba(0,255,255,0.4);
+}
+
+.section{
+    margin-bottom:25px;
+}
+
+.section h3{
+    color:#00ffff;
+    margin-bottom:15px;
+    border-bottom:2px solid #00ffff;
+    padding-bottom:5px;
+}
+
+.section ol{
+    padding-left:25px;
+}
+
+.section li{
+    margin-bottom:12px;
+    line-height:1.8;
+}
+
+.accept-area{
+    text-align:center;
+    margin:30px 0;
+}
+
+.accept-area label{
+    font-size:18px;
+}
+
+#acceptBtn{
+    margin-top:20px;
+    padding:15px 40px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    background:#00ffff;
+    color:black;
+    cursor:pointer;
+    box-shadow:0 0 20px #00ffff;
+}
+
+#acceptBtn:disabled{
+    background:gray;
+    color:white;
+    cursor:not-allowed;
+    box-shadow:none;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#cccccc;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>💻 DAS COMPUTER CENTRE</h1>
+    <h2>Rules & Regulations</h2>
+</div>
+
+<div class="rules-box">
+
+    <div class="section">
+        <h3>📌 General Rules of the Centre</h3>
+        <ol>
+            <li>Every student must arrive at the centre at least 15 minutes before the class starts.</li>
+            <li>If unable to attend class, inform in advance on WhatsApp: 9614180080.</li>
+            <li>Four consecutive absences without informing may result in cancellation of admission.</li>
+            <li>Every student must bring their yellow card.</li>
+            <li>The entire centre is under CCTV surveillance.</li>
+            <li>Parents may contact after 9 PM regarding academic progress.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h3>📚 Rules During Class</h3>
+        <ol>
+            <li>Students are encouraged to ask questions.</li>
+            <li>Playing video games during class is strictly prohibited.</li>
+            <li>Mobile phones cannot be used without teacher permission.</li>
+            <li>Mobile phones may only be used for educational purposes.</li>
+            <li>Urgent calls must be attended outside the classroom.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h3>💰 Fee Related Rules</h3>
+        <ol>
+            <li>Fees must be paid between the 1st and 10th of every month.</li>
+            <li>All fees are taken in advance.</li>
+            <li>Reserved seats remain chargeable even during long absences.</li>
+            <li>Students wishing to stop classes must inform in advance to remove their name from the timetable.</li>
+            <li>Card must be brought while submitting fees.</li>
+            <li>For PhonePe, Google Pay or Net Banking payments, send screenshot with Name & Roll No. to WhatsApp.</li>
+            <li>Certificate course students must clear dues one month before examination.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h3>🎉 Holidays</h3>
+        <ol>
+            <li>New Year's Day</li>
+            <li>Saraswati Puja</li>
+            <li>Holi</li>
+            <li>Bengali New Year</li>
+            <li>Eid al-Fitr</li>
+            <li>Rath Yatra</li>
+            <li>Independence Day</li>
+            <li>Eid al-Adha</li>
+            <li>Muharram</li>
+            <li>Janmashtami</li>
+            <li>Vishwakarma Puja</li>
+            <li>Durga Puja (Sasthi – Lakshmi Puja)</li>
+            <li>Kali Puja</li>
+            <li>Bhaiphota</li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="accept-area">
+
+    <input type="checkbox" id="agree">
+
+    <label for="agree">
+        I have read and agree to all rules and regulations.
+    </label>
+
+    <br>
+
+    <button id="acceptBtn" disabled>
+        ✅ I ACCEPT
+    </button>
+
+</div>
+
+<footer>
+    Das Computer Centre © 2026
+</footer>
+
+<script>
+
+const checkbox = document.getElementById("agree");
+const btn = document.getElementById("acceptBtn");
+
+checkbox.addEventListener("change",function(){
+    btn.disabled=!this.checked;
+});
+
+btn.addEventListener("click",function(){
+    window.location.href="home.html";
+});
+
+</script>
+
+</body>
+</html>
