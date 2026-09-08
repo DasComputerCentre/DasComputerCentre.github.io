@@ -1,54 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Das Computer Centre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Das Computer Centre - Home</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial,sans-serif;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    color:#333;
+    line-height:1.6;
+    background:#f8fafc;
 }
 
 header{
-    background:#003399;
+    background:linear-gradient(135deg, #001f54, #003399);
     color:white;
-    padding:15px;
+    padding:30px 15px;
     text-align:center;
+}
+
+header h1{
+    font-size:32px;
+    letter-spacing:1px;
+    margin-bottom:5px;
+}
+
+header p{
+    font-size:16px;
+    color:#cbd5e1;
 }
 
 nav{
     background:#0055cc;
-    padding:10px;
+    padding:12px;
     text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
-    font-weight:bold;
+    margin:0 12px;
+    font-weight:600;
+    font-size:15px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
 }
 
 .hero{
     text-align:center;
-    padding:40px;
+    padding:45px 20px;
+    background:white;
+    border-bottom:1px solid #e2e8f0;
 }
 
 .hero img{
-    width:180px;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:26px;
+    color:#001f54;
+    margin-bottom:8px;
+}
+
+.hero p{
+    font-size:16px;
+    color:#64748b;
 }
 
 .section{
-    padding:30px;
+    padding:40px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
     text-align:center;
+    color:#003399;
+    font-size:24px;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    display:block;
+    width:50px;
+    height:3px;
+    background:#0055cc;
+    margin:8px auto 0;
+    border-radius:2px;
+}
+
+.about-box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+    font-size:16px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:22px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+    border-top:4px solid #0055cc;
+    transition:transform 0.2s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h3{
+    color:#003399;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.card p{
+    color:#555;
+    font-size:14px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:15px;
+}
+
+.gallery-placeholder{
+    background:#e2e8f0;
+    height:150px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#64748b;
+    font-size:14px;
+    border:1px dashed #94a3b8;
+}
+
+.contact-box{
+    background:white;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.btn-whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    font-size:15px;
+    margin-top:15px;
+    box-shadow:0 3px 8px rgba(37,211,102,0.3);
+}
+
+.btn-whatsapp:hover{
+    background:#20ba59;
 }
 
 footer{
-    background:#003399;
-    color:white;
+    background:#001f54;
+    color:#cbd5e1;
     text-align:center;
-    padding:15px;
+    padding:20px;
+    font-size:14px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+    header h1{ font-size:24px; }
+    nav a{ margin:0 8px; font-size:13px; }
+    .section{ padding:25px 15px; }
 }
 </style>
 </head>
@@ -56,46 +213,96 @@ footer{
 <body>
 
 <header>
-<h1>Das Computer Centre</h1>
-<p>Saratpalli | ESTD: 2018</p>
+    <h1>DAS COMPUTER CENTRE</h1>
+    <p>স্থাপিত: ২০১৮ | পূর্ব বর্ধমান</p>
 </header>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#courses">Courses</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+    <a href="#home">হোম</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#courses">কোর্সসমূহ</a>
+    <a href="#branches">শাখা</a>
+    <a href="#gallery">গ্যালারি</a>
+    <a href="#contact">যোগাযোগ</a>
 </nav>
 
 <div class="hero" id="home">
-<img src="logo.jpg">
-<h2>Welcome to Das Computer Centre</h2>
-<p>Computer Training & Digital Services</p>
+    <img src="logo.jpg" alt="Das Computer Centre Logo">
+    <h2>Welcome to Das Computer Centre</h2>
+    <p>কম্পিউটার প্রশিক্ষণ ও আধুনিক ডিজিটাল পরিষেবা</p>
 </div>
 
+<!-- About Section -->
 <div class="section" id="about">
-<h2>About Us</h2>
-<p>Das Computer Centre provides quality computer education and practical training.</p>
+    <h2 class="section-title">আমাদের সম্পর্কে</h2>
+    <div class="about-box">
+        <p>দাস কম্পিউটার সেন্টার ২০১৮ সাল থেকে শিক্ষার্থীদের গুণগত ও ব্যবহারিক কম্পিউটার শিক্ষা প্রদানে প্রতিশ্রুতিবদ্ধ। আধুনিক প্রযুক্তির সাথে শিক্ষার্থীদের দক্ষ করে গড়ে তোলাই আমাদের প্রধান লক্ষ্য।</p>
+    </div>
 </div>
 
+<!-- Courses Section -->
 <div class="section" id="courses">
-<h2>Courses</h2>
-<p>DCA, ADCA, Tally, Programming, MS Office, Internet, Graphics etc.</p>
+    <h2 class="section-title">কোর্সসমূহ</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>DCA / ADCA</h3>
+            <p>বেসিক কম্পিউটার, অফিস প্যাকেজ ও অ্যাডভান্সড অ্যাপ্লিকেশন ডিপ্লোমা কোর্স।</p>
+        </div>
+        <div class="card">
+            <h3>Financial Accounting</h3>
+            <p>ট্যালি প্রাইম (Tally Prime), জিএসটি (GST) এবং ব্যালেন্স শিট ম্যানেজমেন্ট।</p>
+        </div>
+        <div class="card">
+            <h3>Programming Languages</h3>
+            <p>লজিক বিল্ডিং, C, C++, Python এবং Java প্রোগ্রামিং বেসিকস।</p>
+        </div>
+        <div class="card">
+            <h3>Graphics & Web Design</h3>
+            <p>ফটোশপ, পেজমেকার, কোরেলড্র এবং বেসিক HTML/CSS ওয়েব ডিজাইন।</p>
+        </div>
+    </div>
 </div>
 
+<!-- Branches Section -->
+<div class="section" id="branches">
+    <h2 class="section-title">আমাদের শাখাসমূহ</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>📍 ব্রাঞ্চ ১ (গোলাপবাগ)</h3>
+            <p>দাস কম্পিউটার সেন্টার, গোলাপবাগ, আমতলা, শরৎপল্লী, পূর্ব বর্ধমান।</p>
+        </div>
+        <div class="card">
+            <h3>📍 ব্রাঞ্চ ২ (নবাবহাট)</h3>
+            <p>দাস কম্পিউটার সেন্টার, নবাবহাট, সিউরি রোড, ১০৮ শিব মন্দিরের বিপরীতে, পূর্ব বর্ধমান।</p>
+        </div>
+    </div>
+</div>
+
+<!-- Gallery Section -->
 <div class="section" id="gallery">
-<h2>Gallery</h2>
-<p>Gallery images will be added here.</p>
+    <h2 class="section-title">গ্যালারি</h2>
+    <div class="gallery-grid">
+        <div class="gallery-placeholder">সেন্টারের ছবি ১</div>
+        <div class="gallery-placeholder">ল্যাব প্র্যাকটিস ছবি ২</div>
+        <div class="gallery-placeholder">ক্লাসরুম ছবি ৩</div>
+        <div class="gallery-placeholder">অ্যাওয়ার্ড / ইভেন্ট ছবি ৪</div>
+    </div>
 </div>
 
+<!-- Contact Section -->
 <div class="section" id="contact">
-<h2>Contact Us</h2>
-<p>WhatsApp: 9614180080</p>
+    <h2 class="section-title">যোগাযোগ</h2>
+    <div class="contact-box">
+        <p>ভর্তি বা যেকোনো তথ্যের জন্য সরাসরি যোগাযোগ করুন:</p>
+        <p style="font-size:18px; font-weight:bold; margin-top:8px;">📞 ফোন / WhatsApp: +91 9614180080</p>
+        <a class="btn-whatsapp" href="https://wa.me/919614180080" target="_blank">
+            💬 WhatsApp-এ মেসেজ করুন
+        </a>
+    </div>
 </div>
 
 <footer>
-Das Computer Centre © 2026
+    Das Computer Centre © 2026 | সর্বস্বত্ব সংরক্ষিত
 </footer>
 
 </body>
