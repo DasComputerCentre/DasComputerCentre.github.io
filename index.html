@@ -7,7 +7,6 @@
 <title>Das Computer Centre - Rules & Regulations</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -15,10 +14,11 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#000428,#004e92);
-    color:white;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:linear-gradient(135deg, #000428, #004e92);
+    color:#ffffff;
     min-height:100vh;
+    line-height:1.6;
 }
 
 body::before{
@@ -30,93 +30,177 @@ body::before{
     height:100%;
     background:url('logo.jpg') center center no-repeat;
     background-size:350px;
-    opacity:0.05;
+    opacity:0.04;
     pointer-events:none;
 }
 
 .container{
     width:95%;
-    max-width:1200px;
+    max-width:1150px;
     margin:auto;
-    padding:20px;
+    padding:30px 10px;
 }
 
 .header{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .header h1{
     color:#00ffff;
-    font-size:42px;
-    text-shadow:0 0 15px #00ffff;
+    font-size:36px;
+    text-shadow:0 0 15px rgba(0, 255, 255, 0.6);
+    letter-spacing:1px;
 }
 
-.header p{
-    color:#ddd;
+.header h2{
     margin-top:10px;
+    color:#ffffff;
+    font-size:24px;
+    font-weight:600;
 }
 
 .rules-box{
-    background:rgba(255,255,255,0.08);
-    border:1px solid #00ffff;
-    border-radius:20px;
-    padding:25px;
+    background:rgba(255, 255, 255, 0.07);
+    border:1px solid rgba(0, 255, 255, 0.5);
+    border-radius:18px;
+    padding:30px;
     backdrop-filter:blur(10px);
-    box-shadow:0 0 25px rgba(0,255,255,0.35);
+    box-shadow:0 0 25px rgba(0, 255, 255, 0.25);
 }
 
 .section{
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
-.section h2{
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    border-bottom:2px solid rgba(0, 255, 255, 0.4);
+    padding-bottom:8px;
+    margin-bottom:18px;
+}
+
+.section-header h3{
     color:#00ffff;
-    border-bottom:2px solid #00ffff;
-    padding-bottom:10px;
-    margin-bottom:15px;
+    font-size:19px;
 }
 
-.section p,
-.section li{
-    line-height:1.8;
+.rule-card{
+    background:rgba(0, 0, 0, 0.25);
+    border-left:4px solid #00ffff;
+    border-radius:6px;
+    padding:14px 18px;
+    margin-bottom:14px;
 }
 
-.accept{
+.rule-bn{
+    color:#ffffff;
+    font-size:15px;
+    font-weight:500;
+    margin-bottom:6px;
+}
+
+.rule-en{
+    color:#bbd2e8;
+    font-size:14px;
+}
+
+/* ছুটির তালিকা গ্রিড স্টাইল */
+.holiday-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:12px;
+}
+
+.holiday-card{
+    background:rgba(0, 255, 255, 0.06);
+    border:1px solid rgba(0, 255, 255, 0.3);
+    border-radius:8px;
+    padding:10px 14px;
+}
+
+.holiday-bn{
+    color:#00ffff;
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:3px;
+}
+
+.holiday-en{
+    color:#ddd;
+    font-size:13px;
+}
+
+.accept-area{
     text-align:center;
-    margin:30px 0;
+    margin:35px auto 20px;
+    background:rgba(0, 0, 0, 0.35);
+    padding:25px 20px;
+    border-radius:12px;
+    max-width:850px;
+    border:1px solid rgba(0, 255, 255, 0.3);
 }
 
-.accept label{
-    font-size:18px;
+.accept-area label{
+    font-size:16px;
+    cursor:pointer;
+    user-select:none;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+#agree{
+    transform:scale(1.3);
+    margin-right:10px;
+    cursor:pointer;
+    vertical-align:middle;
 }
 
 #acceptBtn{
-    margin-top:20px;
-    padding:15px 40px;
-    font-size:18px;
-    font-weight:bold;
+    display:block;
+    margin:22px auto 0;
+    padding:14px 45px;
     border:none;
-    border-radius:10px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
     background:#00ffff;
-    color:black;
+    color:#000428;
     cursor:pointer;
-    box-shadow:0 0 20px #00ffff;
+    box-shadow:0 0 15px rgba(0, 255, 255, 0.5);
+    transition:0.3s ease;
 }
 
 #acceptBtn:disabled{
-    background:gray;
-    color:white;
+    background:#555555;
+    color:#aaaaaa;
     cursor:not-allowed;
     box-shadow:none;
 }
 
-.footer{
-    text-align:center;
-    color:#ddd;
-    padding:20px;
+#acceptBtn:hover:not(:disabled){
+    background:#ffffff;
+    box-shadow:0 0 25px #ffffff;
 }
 
+footer{
+    text-align:center;
+    padding:25px 15px;
+    color:#bbbbbb;
+    font-size:14px;
+}
+
+@media (max-width:768px){
+    .header h1{ font-size:28px; }
+    .header h2{ font-size:20px; }
+    .section-header h3{ font-size:17px; }
+    .rules-box{ padding:18px 12px; }
+    .rule-card{ padding:12px 14px; }
+    .accept-area label{ font-size:14px; }
+}
 </style>
 </head>
 
@@ -126,55 +210,223 @@ body::before{
 
 <div class="header">
     <h1>💻 DAS COMPUTER CENTRE</h1>
-    <p>Saratpalli | ESTD: 2018</p>
-    <h3>Rules & Regulations</h3>
+    <h2>দাস কম্পিউটার সেন্টারের নিয়মাবলী (Rules & Regulations)</h2>
 </div>
 
 <div class="rules-box">
 
-    <p style="text-align:center;">
-        নিচের সমস্ত নিয়মাবলী মনোযোগ সহকারে পড়ুন।
-    </p>
+    <!-- সেকশন ১: সাধারণ নিয়ম -->
+    <div class="section">
+        <div class="section-header">
+            <h3>সেন্টারের সাধারণ নিয়ম :</h3>
+            <h3>General Rules of the Centre:</h3>
+        </div>
 
-    <!-- এখানে তোমার সম্পূর্ণ Rules Section বসবে -->
+        <div class="rule-card">
+            <div class="rule-bn">১। প্রত্যেক ছাত্রছাত্রীকে ক্লাস শুরুর কমপক্ষে ১৫ মিনিট আগে সেন্টারে উপস্থিত হতে হবে।</div>
+            <div class="rule-en">1. Every student must arrive at the centre at least 15 minutes before the class starts.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">২। কোনো ছাত্রছাত্রী কোনোদিন ক্লাসে উপস্থিত থাকতে না পারলে, অবশ্যই WhatsApp No. (9614180080) এ আগে থেকে মেসেজ করে জানাতে হবে।</div>
+            <div class="rule-en">2. If any student is unable to attend class on any day, they must inform in advance by messaging on WhatsApp No. (9614180080).</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৩। কোনো ছাত্রছাত্রী যদি পরপর চারটি ক্লাস অনুপস্থিত থাকে এবং অনুপস্থিতির কারণ WhatsApp এ না জানায়, তাহলে তার নাম সেন্টার থেকে বাতিল করা হতে পারে।</div>
+            <div class="rule-en">3. If a student is absent for four consecutive classes without informing the reason via WhatsApp, their name may be canceled from the centre.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৪। ক্লাসে আসার সময় প্রত্যেক ছাত্রছাত্রীকে অবশ্যই হলুদ কার্ড সঙ্গে আনতে হবে।</div>
+            <div class="rule-en">4. Every student must bring their yellow card when coming to class.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৫। সমগ্র সেন্টার সি.সি. টিভি ক্যামেরার আওতাভুক্ত।</div>
+            <div class="rule-en">5. The entire centre is under CCTV camera surveillance.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৬। ছাত্রছাত্রীর পড়াশোনার অগ্রগতি জানার জন্য অভিভাবকদের প্রয়োজনে রাত ৯টার পরে যোগাযোগ করতে অনুরোধ করা হচ্ছে।</div>
+            <div class="rule-en">6. Parents are requested to contact after 9 PM if needed to know about their child's academic progress.</div>
+        </div>
+    </div>
+
+    <!-- সেকশন ২: ক্লাস চলাকালীন নিয়ম -->
+    <div class="section">
+        <div class="section-header">
+            <h3>ক্লাস চলাকালীন যেসব নিয়ম অবশ্যই মেনে চলতে হবে :</h3>
+            <h3>Rules to be Followed During Class:</h3>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">১। ছাত্রছাত্রীদের সবসময় প্রশ্ন করতে উৎসাহিত করা হয়, কারণ জিজ্ঞাসাই শিক্ষার প্রধান ভিত্তি।</div>
+            <div class="rule-en">1. Students are always encouraged to ask questions, as curiosity is the foundation of learning.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">২। ক্লাস চলাকালীন ভিডিও গেম খেলা সম্পূর্ণ নিষিদ্ধ।</div>
+            <div class="rule-en">2. Playing video games during class is strictly prohibited.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৩। শিক্ষকের অনুমতি ছাড়া ক্লাসের মধ্যে মোবাইল ফোন ব্যবহার করা যাবে না।</div>
+            <div class="rule-en">3. Mobile phones cannot be used in class without the teacher's permission.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৪। শুধুমাত্র শিক্ষামূলক প্রয়োজনে মোবাইল ব্যবহার করা যাবে এবং তার আগে শিক্ষকের অনুমতি নিতে হবে।</div>
+            <div class="rule-en">4. Mobile phones can only be used for educational purposes with prior permission from the teacher.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৫। জরুরী ফোনকল করার প্রয়োজন হলে, ক্লাসরুমের বাহিরে গিয়ে কথা বলতে হবে।</div>
+            <div class="rule-en">5. If an urgent call needs to be made/received, student must step outside the classroom to talk.</div>
+        </div>
+    </div>
+
+    <!-- সেকশন ৩: বেতন সংক্রান্ত নিয়ম -->
+    <div class="section">
+        <div class="section-header">
+            <h3>বেতন সংক্রান্ত নিয়মাবলী :</h3>
+            <h3>Fee Related Rules:</h3>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">১। প্রতি মাসের ফি মাসের ১ তারিখ থেকে ১০ তারিখের মধ্যে জমা দিতে হবে।</div>
+            <div class="rule-en">1. Every month's fee must be paid between the 1st and 10th of the month.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">২। সেন্টারের সমস্ত ফি অগ্রিম (Advance) হিসাবে নেওয়া হয়।</div>
+            <div class="rule-en">2. All fees at the centre are taken in advance.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৩। বিশেষ করে স্কুলের পরীক্ষার পরে অনেক ছাত্রছাত্রী ১ মাস, ২ মাস বা ৩ মাস কম্পিউটার ক্লাসে আসে না। কিন্তু তাদের নাম সেন্টারের টাইম টেবিলে রাখা থাকে, তাই সেই মাসের ফি দিতে হবে। কারণ ওই সিটটি অন্য কোনো ছাত্রছাত্রীকে দেওয়া সম্ভব হয় না।</div>
+            <div class="rule-en">3. Particularly after school exams, many students do not attend computer classes for 1, 2, or 3 months. However, their names remain reserved on the centre's timetable, so the fee for those months must be paid because that seat cannot be allocated to any other student.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৪। যদি কোনো ছাত্রছাত্রী কিছুদিন ক্লাস বন্ধ রাখতে চায় বা ওই মাসের ফি এড়াতে চায়, তাহলে আগে থেকে সেন্টারে জানিয়ে টাইম টেবিল থেকে নিজের নাম সরিয়ে নিতে হবে। নাম সরিয়ে নিলে সেই মাসের ফি দিতে হবে না। তবে পরে আবার ক্লাস শুরু করতে চাইলে আগের সিটটি নাও পাওয়া যেতে পারে। তখন সেন্টারে যে সিট বা ব্যাচ খালি থাকবে, সেই সিট ও সময় অনুযায়ী ক্লাস করতে হবে। বিশেষ করে স্কুল পরীক্ষার পর অনেক গুরুত্বপূর্ণ ও অতিরিক্ত বিষয় বিস্তারিতভাবে শেখানো হয়, যা ভবিষ্যতে কাজের ক্ষেত্রে খুব উপকারে আসে। শুধুমাত্র স্কুলের পড়াশোনা নয়, বাস্তব কাজের ক্ষেত্রেও কম্পিউটার শিক্ষার প্রয়োজন হয়। তাই নিয়মিত ক্লাস করলে ছাত্রছাত্রীরা বেশি উপকৃত হয়।</div>
+            <div class="rule-en">4. If any student wishes to pause classes for a period or avoid paying fees for that month, they must inform the centre in advance to remove their name from the timetable. Once the name is removed, fees for that month will not apply. However, if they wish to restart classes later, the previous seat/slot may not be available. In that case, they will have to join whatever seat or batch is vacant. Especially after school exams, many important and advanced topics are taught in detail, which are extremely beneficial for future careers. Computer education is essential not just for school studies but for practical work as well; therefore, attending classes regularly benefits students the most.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৫। ফি জমা দেওয়ার সময় কার্ড অবশ্যই সঙ্গে আনতে হবে।</div>
+            <div class="rule-en">5. The card must be brought along when submitting fees.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৬। Phonepe, Google Pay or Net Banking এর মাধ্যমে ফি প্রদান করলে পেমেন্টের স্ক্রিনশট Whatsapp নম্বরে পাঠাতে হবে এবং সঙ্গে ছাত্রছাত্রীর নাম ও রোল নং লিখতে হবে।</div>
+            <div class="rule-en">6. If fees are paid via PhonePe, Google Pay, or Net Banking, a screenshot of the payment must be sent to the WhatsApp number along with the student's Name and Roll No.</div>
+        </div>
+
+        <div class="rule-card">
+            <div class="rule-bn">৭। সার্টিফিকেট কোর্সের ছাত্রছাত্রীদের পরীক্ষার অন্তত এক মাস আগে সমস্ত বকেয়া ফি জমা দিতে হবে।</div>
+            <div class="rule-en">7. Certificate course students must clear all dues at least one month before the examination.</div>
+        </div>
+    </div>
+
+    <!-- সেকশন ৪: ছুটির তালিকা -->
+    <div class="section">
+        <div class="section-header">
+            <h3>ছুটির দিনগুলো সমূহ :</h3>
+            <h3>List of Holidays:</h3>
+        </div>
+
+        <div class="holiday-grid">
+            <div class="holiday-card">
+                <div class="holiday-bn">১। ইংরেজি নববর্ষ – ১ দিন</div>
+                <div class="holiday-en">1. New Year's Day – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">২। সরস্বতী পূজা – ২ দিন</div>
+                <div class="holiday-en">2. Saraswati Puja – 2 Days</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">৩। হোলী – ১ দিন</div>
+                <div class="holiday-en">3. Holi – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">৪। বাংলা নববর্ষ – ১ দিন</div>
+                <div class="holiday-en">4. Bengali New Year – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">৫। ঈদ উল ফিতর – ১ দিন</div>
+                <div class="holiday-en">5. Eid al-Fitr – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">৬। রথের যাত্রা – ১ দিন</div>
+                <div class="holiday-en">6. Rath Yatra – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">৭। স্বাধীনতা দিবস – ১ দিন</div>
+                <div class="holiday-en">7. Independence Day – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">৮। ঈদ-উল-আজহা – ১ দিন</div>
+                <div class="holiday-en">8. Eid al-Adha – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">৯। মহরম – ১ দিন</div>
+                <div class="holiday-en">9. Muharram – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">১০। জন্মাষ্টমী – ১ দিন</div>
+                <div class="holiday-en">10. Janmashtami – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">১১। বিশ্বকর্মা পূজা – ১ দিন</div>
+                <div class="holiday-en">11. Vishwakarma Puja – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">১২। দুর্গা পূজা (ষষ্ঠী - লক্ষ্মী পূজা)</div>
+                <div class="holiday-en">12. Durga Puja (Sasthi - Lakshmi Puja)</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">১৩। কালি পূজা – ১ দিন</div>
+                <div class="holiday-en">13. Kali Puja – 1 Day</div>
+            </div>
+            <div class="holiday-card">
+                <div class="holiday-bn">১৪। ভাইফোঁটা – ১ দিন</div>
+                <div class="holiday-en">14. Bhai Dooj / Bhaiphota – 1 Day</div>
+            </div>
+        </div>
+    </div>
 
 </div>
 
-<div class="accept">
-
+<div class="accept-area">
     <input type="checkbox" id="agree">
-
     <label for="agree">
-        আমি সমস্ত নিয়মাবলী পড়েছি এবং মেনে চলতে সম্মত আছি।
+        আমি সমস্ত নিয়মাবলী মনোযোগ দিয়ে পড়েছি এবং তা সর্বদা মেনে চলতে সম্মত আছি।<br>
+        <span style="font-size:13px; color:#bbd2e8;">(I have read and agree to follow all the rules and regulations.)</span>
     </label>
 
-    <br>
-
     <button id="acceptBtn" disabled>
-        ✅ I ACCEPT
+        ✅ আমি সম্মত (I ACCEPT)
     </button>
-
 </div>
 
-<div class="footer">
-    Das Computer Centre © 2026
-</div>
+<footer>
+    Das Computer Centre © 2026 | সর্বস্বত্ব সংরক্ষিত
+</footer>
 
 </div>
 
 <script>
+const checkbox = document.getElementById("agree");
+const btn = document.getElementById("acceptBtn");
 
-const agree=document.getElementById("agree");
-const btn=document.getElementById("acceptBtn");
-
-agree.addEventListener("change",function(){
-    btn.disabled=!this.checked;
+checkbox.addEventListener("change", function(){
+    btn.disabled = !this.checked;
 });
 
-btn.addEventListener("click",function(){
-    window.location.href="home.html";
+btn.addEventListener("click", function(){
+    window.location.href = "home.html";
 });
-
 </script>
 
 </body>
