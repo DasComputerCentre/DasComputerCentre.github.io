@@ -3,297 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Das Computer Centre - Home</title>
-
+<meta name="description" content="Das Computer Centre — কম্পিউটার শিক্ষা, Tally ও GST, প্রোগ্রামিং, গ্রাফিক্স ডিজাইন এবং AI প্রশিক্ষণ।">
+<title>Das Computer Centre | শিক্ষা, দক্ষতা ও ভবিষ্যৎ</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+:root{--saffron:#d97726;--saffron-soft:#fff0df;--green:#28664b;--green-soft:#eaf3ed;--navy:#182c49;--ink:#293442;--muted:#6b716f;--paper:#fffdf8;--line:#e9e1d5;--white:#fff;--shadow:0 18px 45px rgba(45,47,36,.09)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:100px}body{font-family:Georgia,"Noto Serif Bengali","Nirmala UI",serif;color:var(--ink);background:var(--paper);line-height:1.7}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.sans{font-family:"Segoe UI","Nirmala UI",Arial,sans-serif}.topline{height:5px;background:linear-gradient(90deg,var(--saffron) 0 33.33%,#fff 33.33% 66.66%,var(--green) 66.66%)}
+.utility{background:var(--navy);color:#f8f5ef;font:12px "Segoe UI","Nirmala UI",sans-serif;letter-spacing:.2px}.utility-inner{max-width:1180px;margin:auto;padding:8px 24px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.utility a{color:#ffe1bd}
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{max-width:1180px;margin:auto;min-height:94px;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px;min-width:245px}.brand img{width:66px;height:66px;object-fit:contain}.brand-title{font-size:17px;font-weight:bold;color:var(--navy);line-height:1.35;letter-spacing:.35px}.brand-sub{font:10px "Segoe UI",sans-serif;color:var(--green);letter-spacing:2px;margin-top:4px}.navlinks{display:flex;align-items:center;gap:23px;font:13px "Segoe UI","Nirmala UI",sans-serif;font-weight:650;color:#354252}.navlinks>a:not(.navbutton):hover{color:var(--saffron)}.navbutton,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:3px;font:700 13px "Segoe UI","Nirmala UI",sans-serif;transition:.2s}.navbutton{background:var(--green);color:white}.navbutton:hover,.btn-green:hover{background:#1c4e37;transform:translateY(-2px)}.menu{display:none;border:1px solid var(--line);background:white;color:var(--navy);font-size:22px;padding:6px 12px;border-radius:3px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(105deg,#fffaf1 0%,#fffdf8 55%,#f1f6f0 100%)}.hero:before{content:"";position:absolute;right:-130px;top:-230px;width:560px;height:560px;border:1px solid #28664b21;border-radius:50%;box-shadow:0 0 0 55px #28664b08,0 0 0 110px #28664b05}.hero:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:5px;background:linear-gradient(90deg,var(--saffron),#fff 48%,var(--green))}.hero-inner{max-width:1180px;margin:auto;padding:82px 24px 88px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px;position:relative;z-index:1}.overline{display:flex;align-items:center;gap:11px;color:var(--green);font:700 11px "Segoe UI",sans-serif;letter-spacing:2.3px;text-transform:uppercase}.overline:before{content:"";width:34px;height:2px;background:var(--saffron)}h1{font-size:clamp(38px,5vw,62px);line-height:1.18;letter-spacing:-1.1px;color:var(--navy);font-weight:600;margin:21px 0 20px;max-width:670px}h1 em{font-style:normal;color:var(--green);position:relative}h1 em:after{content:"";position:absolute;left:0;bottom:-5px;width:72%;height:3px;background:var(--saffron)}.hero-copy{font:16px/1.9 "Segoe UI","Nirmala UI",sans-serif;color:#626962;max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}.btn-green{background:var(--green);color:white}.btn-outline{border:1px solid #c9cfc6;color:var(--navy);background:#ffffffa6}.btn-outline:hover{border-color:var(--saffron);color:var(--saffron)}.trustline{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;font:12px "Segoe UI","Nirmala UI",sans-serif;color:#59665e}.trustline span:before{content:"✓";color:var(--green);font-weight:900;margin-right:7px}
+.hero-card{max-width:430px;justify-self:end;width:100%;position:relative;padding:34px 31px;background:#fffefa;border:1px solid #e8ddca;box-shadow:var(--shadow)}.hero-card:before{content:"";position:absolute;inset:8px;border:1px solid #eee4d4;pointer-events:none}.card-kicker{font:700 10px "Segoe UI",sans-serif;letter-spacing:2px;color:var(--saffron);text-align:center}.chakra{width:88px;height:88px;border:2px solid #315a82;border-radius:50%;margin:17px auto 20px;display:grid;place-items:center;position:relative;color:#315a82}.chakra:before,.chakra:after{content:"";position:absolute;background:#315a82}.chakra:before{width:2px;height:76px;box-shadow:0 0 0 0 #315a82;transform:rotate(45deg)}.chakra:after{width:76px;height:2px;transform:rotate(45deg)}.chakra b{z-index:1;background:#fffefa;padding:3px;font:700 15px Georgia,serif}.hero-card h2{text-align:center;color:var(--navy);font-size:25px;line-height:1.4;font-weight:600}.hero-card p{text-align:center;color:var(--muted);font:13px/1.8 "Segoe UI","Nirmala UI",sans-serif;margin-top:10px}.tricolor-rule{height:4px;background:linear-gradient(90deg,var(--saffron) 0 33%,#fff 33% 66%,var(--green) 66%);margin:22px 0 17px;border:1px solid #eee}.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;text-align:center}.mini-stats strong{display:block;font:700 12px "Segoe UI",sans-serif;color:var(--navy)}.mini-stats small{display:block;font:10px "Segoe UI",sans-serif;color:var(--muted);margin-top:3px}
+.quick{max-width:1120px;margin:-1px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper);position:relative}.quick-item{padding:25px 18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);display:flex;gap:13px;align-items:center}.quick-item:first-child{border-left:1px solid var(--line)}.q-icon{font-size:25px;color:var(--saffron)}.quick-item strong{display:block;font:700 13px "Segoe UI","Nirmala UI",sans-serif;color:var(--navy)}.quick-item small{display:block;font:11px "Segoe UI","Nirmala UI",sans-serif;color:var(--muted);margin-top:2px}
+.section{padding:84px 24px}.container{max-width:1120px;margin:auto}.section-head{text-align:center;max-width:710px;margin:0 auto 42px}.eyebrow{font:700 10px "Segoe UI",sans-serif;letter-spacing:2.5px;color:var(--saffron);text-transform:uppercase}.section-head h2,.about h2{font-size:clamp(29px,3.5vw,42px);line-height:1.25;color:var(--navy);font-weight:600;margin:10px 0 13px}.section-head p{font:14px/1.8 "Segoe UI","Nirmala UI",sans-serif;color:var(--muted)}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:58px;align-items:center}.about-art{min-height:360px;background:linear-gradient(145deg,#f9ead8,#f4f6ed);border:1px solid #eadfce;padding:25px;display:grid;place-items:center;position:relative}.about-art:before{content:"";position:absolute;inset:13px;border:1px solid #d9c8ae}.about-seal{width:235px;height:235px;border-radius:50%;border:1px solid #d3a16c;outline:7px solid #f9ead8;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:#fffaf1;position:relative}.about-seal strong{font-size:44px;line-height:1;color:var(--green)}.about-seal span{font:700 10px "Segoe UI",sans-serif;letter-spacing:2px;color:var(--saffron);margin-top:12px}.about-seal small{font:12px "Segoe UI","Nirmala UI",sans-serif;color:var(--navy);margin-top:6px}.about p{font:14px/1.95 "Segoe UI","Nirmala UI",sans-serif;color:var(--muted);margin:14px 0}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:23px 0 27px}.checks span{font:700 13px "Segoe UI","Nirmala UI",sans-serif;color:#38493f}.checks span:before{content:"✓";display:inline-grid;place-items:center;background:var(--green-soft);color:var(--green);width:22px;height:22px;margin-right:9px;border-radius:50%}
+.courses{background:#f7f5ef;border-top:1px solid #eee7dc;border-bottom:1px solid #eee7dc}.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.course{background:#fffefa;border:1px solid #e8e0d4;padding:27px 25px;transition:.2s;position:relative}.course:before{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--saffron);transform:scaleY(0);transform-origin:top;transition:.2s}.course:nth-child(even):before{background:var(--green)}.course:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d7cbb9}.course:hover:before{transform:scaleY(1)}.course-icon{font-size:27px;width:53px;height:53px;background:var(--saffron-soft);display:grid;place-items:center;margin-bottom:17px}.course:nth-child(even) .course-icon{background:var(--green-soft)}.course h3{font-size:19px;color:var(--navy);font-weight:600;margin-bottom:8px}.course p{font:13px/1.8 "Segoe UI","Nirmala UI",sans-serif;color:var(--muted);min-height:68px}.course a{display:inline-block;margin-top:15px;color:var(--green);font:700 12px "Segoe UI",sans-serif}.course a:hover{color:var(--saffron)}
+.ribbon{background:var(--navy);color:#fff;padding:38px 24px;position:relative;overflow:hidden}.ribbon:after{content:"";position:absolute;right:-80px;top:-180px;width:350px;height:350px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}.ribbon-inner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:30px;position:relative;z-index:1}.ribbon h2{font-size:clamp(23px,3vw,34px);line-height:1.3;font-weight:600}.ribbon p{font:13px "Segoe UI","Nirmala UI",sans-serif;color:#d8e1df;margin-top:8px}.ribbon .btn{white-space:nowrap;background:var(--saffron);color:#fff}
+.affiliations{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.affiliation{border:1px solid var(--line);background:#fffefa;text-align:center;padding:27px 22px}.aff-mark{width:57px;height:57px;margin:0 auto 14px;border:1px solid #d6b17c;border-radius:50%;display:grid;place-items:center;color:var(--saffron);font-size:23px}.affiliation h3{color:var(--navy);font-size:18px;font-weight:600}.affiliation p{font:12px/1.8 "Segoe UI","Nirmala UI",sans-serif;color:var(--muted);margin-top:8px}.fineprint{text-align:center;font:11px/1.8 "Segoe UI","Nirmala UI",sans-serif;color:#777;margin:20px auto 0;max-width:760px}
+.branches{background:#f7f5ef}.branch-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.branch{display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:start;padding:28px;background:#fffefa;border:1px solid var(--line)}.pin{width:60px;height:60px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:25px}.branch:nth-child(2) .pin{background:var(--saffron-soft);color:var(--saffron)}.branch h3{font-size:20px;font-weight:600;color:var(--navy)}.branch p{font:13px/1.8 "Segoe UI","Nirmala UI",sans-serif;color:var(--muted);margin:6px 0 12px}.branch a{font:700 12px "Segoe UI",sans-serif;color:var(--green)}
+.contact-box{display:grid;grid-template-columns:1.15fr .85fr;background:#fffefa;border:1px solid var(--line);box-shadow:var(--shadow)}.contact-main{padding:42px}.contact-main h2{font-size:clamp(27px,3vw,38px);line-height:1.3;color:var(--navy);font-weight:600;margin:10px 0}.contact-main p{font:14px/1.8 "Segoe UI","Nirmala UI",sans-serif;color:var(--muted)}.contact-details{background:var(--green);color:white;padding:38px;display:flex;flex-direction:column;justify-content:center;gap:22px;position:relative}.contact-details:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--saffron)}.detail small{display:block;font:10px "Segoe UI",sans-serif;letter-spacing:1.5px;color:#d9e8dc;text-transform:uppercase}.detail strong{display:block;font:700 15px "Segoe UI","Nirmala UI",sans-serif;margin-top:4px;overflow-wrap:anywhere}.contact-details a{color:#ffe0b8}
+footer{background:#17283f;color:#dbe1e5;padding:48px 24px 18px}.footer-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:35px}.footer-brand{display:flex;align-items:center;gap:12px}.footer-brand img{width:58px;height:58px;object-fit:contain;background:#fff;border-radius:2px}.footer-brand strong{display:block;color:#fff;font:700 14px "Segoe UI",sans-serif}.footer-brand small{font:10px "Segoe UI",sans-serif;letter-spacing:1.5px;color:#c9d6ce}.footer-about{font:12px/1.9 "Segoe UI","Nirmala UI",sans-serif;color:#bac6ce;margin-top:17px}.footer-grid h4{font:700 12px "Segoe UI",sans-serif;color:#ffe0b8;letter-spacing:.7px;margin-bottom:14px}.footer-grid ul{list-style:none}.footer-grid li{font:12px/2.2 "Segoe UI","Nirmala UI",sans-serif;color:#cbd4d9}.footer-grid a:hover{color:#ffd4a2}.copyright{max-width:1120px;margin:35px auto 0;padding-top:17px;border-top:1px solid #ffffff20;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:10px "Segoe UI",sans-serif;color:#aebbc4}.whatsapp{position:fixed;right:20px;bottom:20px;z-index:10;background:#246b4a;color:#fff;padding:12px 17px;border-radius:3px;font:700 12px "Segoe UI",sans-serif;box-shadow:0 8px 25px #0002}.whatsapp:hover{background:#174d34}
+@media(max-width:900px){.navlinks{gap:14px}.hero-inner{gap:28px}.quick{grid-template-columns:repeat(2,1fr)}.quick-item:nth-child(3){border-left:1px solid var(--line)}.course-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.utility-inner{padding:8px 16px}.nav{padding:12px 16px;min-height:80px}.brand{min-width:0;gap:10px}.brand img{width:52px;height:52px}.brand-title{font-size:14px}.brand-sub{font-size:9px;letter-spacing:1px}.menu{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:18px 22px 24px;border-bottom:1px solid var(--line);box-shadow:0 12px 18px #0000000b;align-items:stretch;flex-direction:column;gap:17px}.navlinks.open{display:flex}.navbutton{align-self:flex-start}.hero-inner{grid-template-columns:1fr;padding:58px 20px 64px;gap:38px}.hero-card{justify-self:stretch;max-width:none;padding:28px}.hero h1{font-size:42px}.quick{padding:0 15px}.quick-item{padding:18px 11px;gap:9px}.q-icon{font-size:21px}.quick-item strong{font-size:12px}.quick-item small{font-size:10px}.section{padding:62px 20px}.about-grid{grid-template-columns:1fr;gap:32px}.about-art{min-height:300px}.course-grid,.affiliations,.branch-grid{grid-template-columns:1fr}.course p{min-height:0}.ribbon-inner{align-items:flex-start;flex-direction:column}.contact-box{grid-template-columns:1fr}.contact-main,.contact-details{padding:29px 24px}.footer-grid{grid-template-columns:1fr 1fr;gap:27px 18px}.copyright{font-size:10px}.whatsapp{right:12px;bottom:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
+/* ===== DCC SIGNATURE THEME: DEEP BLUE + CYAN ===== */
+:root{
+  --saffron:#00ffff;
+  --saffron-soft:rgba(0,255,255,.10);
+  --green:#00d9ff;
+  --green-soft:rgba(0,255,255,.09);
+  --navy:#000428;
+  --ink:#f4fbff;
+  --muted:#c4d5e6;
+  --paper:#001b49;
+  --line:rgba(0,255,255,.35);
+  --white:#ffffff;
+  --shadow:0 12px 38px rgba(0,255,255,.12);
+}
 body{
-    font-family:'Segoe UI', Arial, sans-serif;
-    color:#333;
-    line-height:1.6;
-    background:#f8fafc;
+  color:#f4fbff;
+  background:linear-gradient(135deg,#000428 0%,#004e92 100%);
+  background-attachment:fixed;
 }
-
-header{
-    background:linear-gradient(135deg, #001f54, #003399);
-    color:white;
-    padding:30px 15px;
-    text-align:center;
+.topline{
+  background:linear-gradient(90deg,#00ffff 0%,#008cff 50%,#00ffff 100%);
 }
-
-header h1{
-    font-size:32px;
-    letter-spacing:1px;
-    margin-bottom:5px;
-}
-
-header p{
-    font-size:16px;
-    color:#cbd5e1;
-}
-
-nav{
-    background:#0055cc;
-    padding:12px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:100;
-    box-shadow:0 2px 10px rgba(0,0,0,0.15);
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 12px;
-    font-weight:600;
-    font-size:15px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#00ffff;
-}
-
+.utility{background:#000428;color:#eafaff;border-bottom:1px solid rgba(0,255,255,.28)}
+.utility a{color:#00ffff}
+header{background:rgba(0,4,40,.94);border-bottom:1px solid rgba(0,255,255,.35)}
+.brand-title{color:#ffffff}
+.brand-sub{color:#00ffff}
+.navlinks{color:#e5f7ff}
+.navlinks>a:not(.navbutton):hover{color:#00ffff}
+.navbutton,.btn-green{background:#00ffff;color:#000428}
+.navbutton:hover,.btn-green:hover{background:#7fffff;color:#000428}
+.menu{background:#00143d;color:#00ffff;border-color:rgba(0,255,255,.45)}
 .hero{
-    text-align:center;
-    padding:45px 20px;
-    background:white;
-    border-bottom:1px solid #e2e8f0;
+  background:linear-gradient(135deg,#000428 0%,#002d68 55%,#004e92 100%);
+  border-color:rgba(0,255,255,.3);
+}
+.hero::before{
+  border-color:rgba(0,255,255,.18);
+  box-shadow:0 0 0 55px rgba(0,255,255,.035),0 0 0 110px rgba(0,255,255,.02);
+}
+.overline,.course a,.branch a{color:#00ffff}
+h1,.hero-card h2,.section-head h2,.about h2,.course h3,.branch h3,
+.affiliation h3,.contact-main h2{color:#ffffff}
+h1 em{color:#00ffff}
+h1 em::after{background:#00ffff}
+.hero-copy,.hero-card p,.section-head p,.about p,.course p,.branch p,
+.affiliation p,.contact-main p{color:#c4d5e6}
+.btn-outline{border-color:rgba(0,255,255,.55);color:#eafaff;background:rgba(0,4,40,.35)}
+.btn-outline:hover{border-color:#00ffff;color:#00ffff}
+.trustline{color:#d3e8f5}
+.trustline span::before{color:#00ffff}
+.hero-card{
+  background:rgba(0,4,40,.55);
+  border:1px solid rgba(0,255,255,.55);
+  box-shadow:0 0 28px rgba(0,255,255,.12);
+  backdrop-filter:blur(12px);
+}
+.hero-card::before{border-color:rgba(0,255,255,.18)}
+.card-kicker{color:#00ffff}
+.chakra{border-color:#00ffff;color:#00ffff}
+.chakra::before,.chakra::after{background:#00ffff}
+.chakra b{background:#00204e;color:#ffffff}
+.tricolor-rule{background:linear-gradient(90deg,#00ffff,#008cff,#00ffff);border:0}
+.mini-stats strong{color:#ffffff}
+.mini-stats small{color:#c4d5e6}
+.quick{background:transparent}
+.quick-item{border-color:rgba(0,255,255,.24)}
+.quick-item strong{color:#ffffff}
+.quick-item small{color:#c4d5e6}
+.q-icon{color:#00ffff}
+.section{background:transparent}
+.about-art{
+  background:linear-gradient(145deg,rgba(0,255,255,.08),rgba(0,78,146,.45));
+  border-color:rgba(0,255,255,.35);
+}
+.about-art::before{border-color:rgba(0,255,255,.25)}
+.about-seal{background:#001943;border-color:#00ffff;outline-color:#00295d}
+.about-seal strong{color:#00ffff}
+.about-seal span{color:#00ffff}
+.about-seal small{color:#eafaff}
+.checks span{color:#eafaff}
+.checks span::before{background:rgba(0,255,255,.12);color:#00ffff}
+.courses,.branches{
+  background:rgba(0,4,40,.28);
+  border-color:rgba(0,255,255,.22);
+}
+.course,.affiliation,.branch,.contact-box{
+  background:rgba(0,13,55,.72);
+  border-color:rgba(0,255,255,.28);
+}
+.course:hover{border-color:#00ffff;box-shadow:0 12px 32px rgba(0,255,255,.12)}
+.course::before,.course:nth-child(even)::before{background:#00ffff}
+.course-icon,.course:nth-child(even) .course-icon{
+  background:rgba(0,255,255,.10);
+  color:#00ffff;
+}
+.ribbon{background:linear-gradient(105deg,#000428,#004e92);border-top:1px solid rgba(0,255,255,.35);border-bottom:1px solid rgba(0,255,255,.35)}
+.ribbon::after{border-color:rgba(0,255,255,.2);box-shadow:0 0 0 35px rgba(0,255,255,.035),0 0 0 70px rgba(0,255,255,.02)}
+.ribbon p{color:#c4d5e6}
+.ribbon .btn{background:#00ffff;color:#000428}
+.ribbon .btn:hover{background:#7fffff}
+.aff-mark{border-color:rgba(0,255,255,.55);color:#00ffff}
+.fineprint{color:#c4d5e6}
+.pin{background:rgba(0,255,255,.10);color:#00ffff}
+.branch:nth-child(2) .pin{background:rgba(0,255,255,.10);color:#00ffff}
+.contact-box{box-shadow:0 12px 38px rgba(0,255,255,.08)}
+.contact-details{background:linear-gradient(150deg,#003c79,#000b36);color:#ffffff}
+.contact-details::before{background:#00ffff}
+.contact-details a{color:#00ffff}
+.detail small{color:#bfefff}
+footer{background:#000428;border-top:1px solid rgba(0,255,255,.3)}
+.footer-brand img{background:#ffffff}
+.footer-brand small{color:#00ffff}
+.footer-about,.footer-grid li{color:#c4d5e6}
+.footer-grid h4{color:#00ffff}
+.footer-grid a:hover{color:#ffffff}
+.copyright{border-color:rgba(0,255,255,.2);color:#b7cfe0}
+.whatsapp{background:#00ffff;color:#000428;box-shadow:0 0 22px rgba(0,255,255,.25)}
+.whatsapp:hover{background:#7fffff;color:#000428}
+@media(max-width:680px){
+  .navlinks{background:#000b36;border-color:rgba(0,255,255,.35)}
 }
 
-.hero img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    object-fit:cover;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
-    margin-bottom:15px;
-}
-
-.hero h2{
-    font-size:26px;
-    color:#001f54;
-    margin-bottom:8px;
-}
-
-.hero p{
-    font-size:16px;
-    color:#64748b;
-}
-
-.section{
-    padding:40px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    color:#003399;
-    font-size:24px;
-    margin-bottom:25px;
-    position:relative;
-}
-
-.section-title::after{
-    content:'';
-    display:block;
-    width:50px;
-    height:3px;
-    background:#0055cc;
-    margin:8px auto 0;
-    border-radius:2px;
-}
-
-.about-box{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 2px 8px rgba(0,0,0,0.06);
-    font-size:16px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    border-radius:10px;
-    padding:22px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.06);
-    border-top:4px solid #0055cc;
-    transition:transform 0.2s ease;
-}
-
-.card:hover{
-    transform:translateY(-4px);
-}
-
-.card h3{
-    color:#003399;
-    margin-bottom:10px;
-    font-size:18px;
-}
-
-.card p{
-    color:#555;
-    font-size:14px;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-    gap:15px;
-}
-
-.gallery-placeholder{
-    background:#e2e8f0;
-    height:150px;
-    border-radius:8px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#64748b;
-    font-size:14px;
-    border:1px dashed #94a3b8;
-}
-
-.contact-box{
-    background:white;
-    text-align:center;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.06);
-}
-
-.btn-whatsapp{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
-    font-size:15px;
-    margin-top:15px;
-    box-shadow:0 3px 8px rgba(37,211,102,0.3);
-}
-
-.btn-whatsapp:hover{
-    background:#20ba59;
-}
-
-footer{
-    background:#001f54;
-    color:#cbd5e1;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-    margin-top:30px;
-}
-
-@media(max-width:600px){
-    header h1{ font-size:24px; }
-    nav a{ margin:0 8px; font-size:13px; }
-    .section{ padding:25px 15px; }
-}
 </style>
 </head>
-
 <body>
-
-<header>
-    <h1>DAS COMPUTER CENTRE</h1>
-    <p>স্থাপিত: ২০১৮ | পূর্ব বর্ধমান</p>
-</header>
-
-<nav>
-    <a href="index.html">হোম</a>
-    <a href="#about">আমাদের সম্পর্কে</a>
-    <a href="courses.html">কোর্সসমূহ</a>
-    <a href="address.html">ঠিকানা</a>
-    <a href="gallery.html">গ্যালারি</a>
-    <a href="notice.html">নোটিশ</a>
-    <a href="rules.html">নিয়মাবলী</a>
-    <a href="#contact">যোগাযোগ</a>
-</nav>
-
-<div class="hero" id="home">
-    <img src="logo.jpg" alt="Das Computer Centre Logo">
-    <h2>Welcome to Das Computer Centre</h2>
-    <p>কম্পিউটার প্রশিক্ষণ ও আধুনিক ডিজিটাল পরিষেবা</p>
-</div>
-
-<!-- About Section -->
-<div class="section" id="about">
-    <h2 class="section-title">আমাদের সম্পর্কে</h2>
-    <div class="about-box">
-        <p>দাস কম্পিউটার সেন্টার ২০১৮ সাল থেকে শিক্ষার্থীদের গুণগত ও ব্যবহারিক কম্পিউটার শিক্ষা প্রদানে প্রতিশ্রুতিবদ্ধ। আধুনিক প্রযুক্তির সাথে শিক্ষার্থীদের দক্ষ করে গড়ে তোলাই আমাদের প্রধান লক্ষ্য।</p>
-    </div>
-</div>
-
-<!-- Courses Section -->
-<div class="section" id="courses">
-    <h2 class="section-title">কোর্সসমূহ</h2>
-    <div class="grid">
-        <a class="card card-link" href="courses.html"><h3>DCA / ADCA</h3><p>বেসিক কম্পিউটার, অফিস প্যাকেজ ও অ্যাডভান্সড অ্যাপ্লিকেশন ডিপ্লোমা কোর্স।</p><p class="click-hint">বিস্তারিত দেখতে ক্লিক করুন →</p></a>
-        <a class="card card-link" href="courses.html"><h3>Financial Accounting</h3><p>ট্যালি প্রাইম (Tally Prime), জিএসটি (GST) এবং ব্যালেন্স শিট ম্যানেজমেন্ট।</p><p class="click-hint">বিস্তারিত দেখতে ক্লিক করুন →</p></a>
-        <a class="card card-link" href="courses.html"><h3>Programming Languages</h3><p>লজিক বিল্ডিং, C, C++, Python এবং Java প্রোগ্রামিং বেসিকস।</p><p class="click-hint">বিস্তারিত দেখতে ক্লিক করুন →</p></a>
-        <a class="card card-link" href="courses.html"><h3>Graphics & Web Design</h3><p>ফটোশপ, পেজমেকার, কোরেলড্র এবং বেসিক HTML/CSS ওয়েব ডিজাইন।</p><p class="click-hint">বিস্তারিত দেখতে ক্লিক করুন →</p></a>
-    </div>
-</div>
-
-<!-- Branches Section -->
-<div class="section" id="branches">
-    <h2 class="section-title">আমাদের শাখাসমূহ</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>📍 ব্রাঞ্চ ১ (গোলাপবাগ)</h3>
-            <p>দাস কম্পিউটার সেন্টার, গোলাপবাগ, আমতলা, শরৎপল্লী, পূর্ব বর্ধমান।</p>
-        </div>
-        <div class="card">
-            <h3>📍 ব্রাঞ্চ ২ (নবাবহাট)</h3>
-            <p>দাস কম্পিউটার সেন্টার, নবাবহাট, সিউরি রোড, ১০৮ শিব মন্দিরের বিপরীতে, পূর্ব বর্ধমান।</p>
-        </div>
-    </div>
-</div>
-
-<!-- Gallery Section -->
-<div class="section" id="gallery">
-    <h2 class="section-title">গ্যালারি</h2>
-    <div class="gallery-grid">
-        <div class="gallery-placeholder">সেন্টারের ছবি ১</div>
-        <div class="gallery-placeholder">ল্যাব প্র্যাকটিস ছবি ২</div>
-        <div class="gallery-placeholder">ক্লাসরুম ছবি ৩</div>
-        <div class="gallery-placeholder">অ্যাওয়ার্ড / ইভেন্ট ছবি ৪</div>
-    </div>
-</div>
-
-<!-- Contact Section -->
-<div class="section" id="contact">
-    <h2 class="section-title">যোগাযোগ</h2>
-    <div class="contact-box">
-        <p>ভর্তি বা যেকোনো তথ্যের জন্য সরাসরি যোগাযোগ করুন:</p>
-        <p style="font-size:18px; font-weight:bold; margin-top:8px;">📞 ফোন / WhatsApp: +91 9614180080</p>
-        <a class="btn-whatsapp" href="https://wa.me/919614180080" target="_blank">
-            💬 WhatsApp-এ মেসেজ করুন
-        </a>
-    </div>
-</div>
-
-<footer>
-    Das Computer Centre © 2026 | সর্বস্বত্ব সংরক্ষিত
-</footer>
-
+<div class="topline"></div>
+<div class="utility"><div class="utility-inner"><span>শিক্ষা • দক্ষতা • আত্মবিশ্বাস</span><span class="sans">Practical Computer Education · Digital Skills · Career Learning</span></div></div>
+<header><div class="nav"><a class="brand" href="#home" aria-label="Das Computer Centre home"><img src="logo.png" alt="Das Computer Centre Logo"><span><span class="brand-title">DAS COMPUTER CENTRE</span><span class="brand-sub">LEARN · CREATE · GROW</span></span></a><button class="menu" id="menu" aria-label="মেনু খুলুন" aria-expanded="false">☰</button><nav class="navlinks" id="navlinks"><a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a><a href="course.html">কোর্সসমূহ</a><a href="gallery(1).html">গ্যালারি</a><a href="notice(1).html">নোটিস</a><a href="address(1).html">ঠিকানা</a><a class="navbutton" href="#contact">ভর্তি ও যোগাযোগ ↗</a></nav></div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner"><div><div class="overline">A place to learn and grow</div><h1>দক্ষতার পথে আপনার<br><em>বিশ্বস্ত সঙ্গী</em></h1><p class="hero-copy">কম্পিউটার শিক্ষা, অ্যাকাউন্টিং, প্রোগ্রামিং, গ্রাফিক্স ডিজাইন ও আধুনিক AI প্রযুক্তির ব্যবহারিক প্রশিক্ষণ—শেখার আগ্রহকে বাস্তব দক্ষতায় গড়ে তুলুন Das Computer Centre-এর সঙ্গে।</p><div class="actions"><a class="btn btn-green" href="courses(1).html">কোর্সগুলি দেখুন <span>→</span></a><a class="btn btn-outline" href="#branches">আমাদের শাখা</a></div><div class="trustline"><span>ব্যবহারিক প্রশিক্ষণ</span><span>বিভিন্ন কোর্সের সুযোগ</span><span>দুটি শাখা</span></div></div><aside class="hero-card"><div class="card-kicker">KNOWLEDGE · SKILL · OPPORTUNITY</div><div class="chakra"><b>DCC</b></div><h2>শেখার মধ্যেই<br>আগামীর সম্ভাবনা</h2><p>প্রযুক্তির সঙ্গে এগিয়ে চলুন—একটি দক্ষ, আত্মবিশ্বাসী ভবিষ্যতের লক্ষ্যে।</p><div class="tricolor-rule"></div><div class="mini-stats"><div><strong>COMPUTER</strong><small>প্রাথমিক থেকে উন্নত</small></div><div><strong>ACCOUNTING</strong><small>Tally ও GST</small></div><div><strong>MODERN TECH</strong><small>AI ও Coding</small></div></div></aside></div></section>
+<div class="quick"><div class="quick-item"><span class="q-icon">▤</span><div><strong>কম্পিউটার শিক্ষা</strong><small>Basic থেকে Diploma</small></div></div><div class="quick-item"><span class="q-icon">▥</span><div><strong>অ্যাকাউন্টিং</strong><small>Tally ও GST</small></div></div><div class="quick-item"><span class="q-icon">⌘</span><div><strong>প্রোগ্রামিং</strong><small>Python, Java, HTML</small></div></div><div class="quick-item"><span class="q-icon">✳</span><div><strong>AI ও ডিজাইন</strong><small>Creative Digital Skills</small></div></div></div>
+<section class="section" id="about"><div class="container about-grid"><div class="about-art"><div class="about-seal"><strong>DCC</strong><span>EST. · LEARNING</span><small>শিখুন · অনুশীলন করুন · এগিয়ে যান</small></div></div><div class="about"><div class="eyebrow">About our centre</div><h2>শুধু কম্পিউটার শেখা নয়, দক্ষতা গড়ে তোলাই লক্ষ্য</h2><p>Das Computer Centre-এ শিক্ষার্থীদের কম্পিউটার ও আধুনিক ডিজিটাল প্রযুক্তির ব্যবহারিক জ্ঞান অর্জনে সহায়তা করা হয়। বেসিক কম্পিউটার থেকে শুরু করে অফিস অ্যাপ্লিকেশন, অ্যাকাউন্টিং, প্রোগ্রামিং, ডিজাইন এবং AI-ভিত্তিক কাজ—বিভিন্ন আগ্রহ ও শেখার লক্ষ্যের জন্য রয়েছে প্রশিক্ষণের সুযোগ।</p><div class="checks"><span>ব্যবহারিক ক্লাস</span><span>কোর্সের বিভিন্ন বিকল্প</span><span>আধুনিক প্রযুক্তির পরিচয়</span><span>দুটি সুবিধাজনক শাখা</span></div><a class="btn btn-green" href="address(1).html">ঠিকানা ও যোগাযোগ দেখুন →</a></div></div></section>
+<section class="section courses" id="courses"><div class="container"><div class="section-head"><div class="eyebrow">Explore our courses</div><h2>আপনার আগ্রহ, আপনার শেখার পথ</h2><p>নিজের প্রয়োজন ও লক্ষ্য অনুযায়ী কোর্স সম্পর্কে জানুন। সম্পূর্ণ কোর্স, সময়কাল ও ফি জানতে কোর্স পেজ দেখুন অথবা সরাসরি যোগাযোগ করুন।</p></div><div class="course-grid"><article class="course"><div class="course-icon">▤</div><h3>বেসিক কম্পিউটার ও ডিপ্লোমা</h3><p>Windows, টাইপিং, MS Office এবং দৈনন্দিন কম্পিউটার ব্যবহারের প্রয়োজনীয় দক্ষতা।</p><a href="courses(1).html">বিস্তারিত দেখুন ↗</a></article><article class="course"><div class="course-icon">▥</div><h3>Tally ও GST</h3><p>অ্যাকাউন্টিং, হিসাবরক্ষণ, Tally এবং GST-সংক্রান্ত ব্যবহারিক প্রশিক্ষণ।</p><a href="courses(1).html">বিস্তারিত দেখুন ↗</a></article><article class="course"><div class="course-icon">⌘</div><h3>প্রোগ্রামিং ও ওয়েব</h3><p>Python, Java, HTML এবং প্রোগ্রামিংয়ের মৌলিক ধারণা ও অনুশীলন।</p><a href="courses(1).html">বিস্তারিত দেখুন ↗</a></article><article class="course"><div class="course-icon">✎</div><h3>গ্রাফিক্স ও DTP</h3><p>Photoshop, CorelDRAW এবং পোস্টার, ব্যানার ও অন্যান্য ডিজাইন তৈরির দক্ষতা।</p><a href="courses(1).html">বিস্তারিত দেখুন ↗</a></article><article class="course"><div class="course-icon">✳</div><h3>AI ডিজাইন ও ভিডিও</h3><p>AI-ভিত্তিক ছবি, পোস্টার, লোগো ও ভিডিও তৈরির আধুনিক পদ্ধতি।</p><a href="courses(1).html">বিস্তারিত দেখুন ↗</a></article><article class="course"><div class="course-icon">⚙</div><h3>হার্ডওয়্যার ও নেটওয়ার্কিং</h3><p>কম্পিউটার হার্ডওয়্যার, সমস্যা নির্ণয়, রক্ষণাবেক্ষণ ও নেটওয়ার্কিংয়ের ভিত্তি।</p><a href="courses(1).html">বিস্তারিত দেখুন ↗</a></article></div></div></section>
+<section class="ribbon"><div class="ribbon-inner"><div><div class="eyebrow" style="color:#f2bd82">Your next step starts here</div><h2>নতুন কিছু শিখুন। নিজের দক্ষতায় আস্থা রাখুন।</h2><p>কোর্স, ফি, সময়সূচি ও ভর্তি সংক্রান্ত তথ্য জানতে যোগাযোগ করুন।</p></div><a class="btn" href="courses(1).html">কোর্সের তালিকা ↗</a></div></section>
+<section class="section" id="recognition"><div class="container"><div class="section-head"><div class="eyebrow">Affiliations & information</div><h2>প্রতিষ্ঠান ও প্রশিক্ষণ সংক্রান্ত তথ্য</h2><p>নির্দিষ্ট কোর্সের স্বীকৃতি, সার্টিফিকেট ও শর্ত সম্পর্কে ভর্তি হওয়ার আগে সেন্টারে যাচাই করে নিন।</p></div><div class="affiliations"><article class="affiliation"><div class="aff-mark">✦</div><h3>BYCEC</h3><p>Bharatiya Youth Computer Education Council-সংক্রান্ত কেন্দ্রের তথ্য।</p></article><article class="affiliation"><div class="aff-mark">✧</div><h3>ITDB</h3><p>Information Technology Development Board-সংক্রান্ত কেন্দ্রের তথ্য।</p></article><article class="affiliation"><div class="aff-mark">▤</div><h3>কোর্স ও সার্টিফিকেট</h3><p>কোর্সভিত্তিক মেয়াদ, মূল্যায়ন ও সার্টিফিকেটের শর্ত জেনে নিন।</p></article></div><p class="fineprint">অনুমোদন বা সার্টিফিকেটের প্রযোজ্যতা কোর্সভেদে আলাদা হতে পারে। বিস্তারিত তথ্যের জন্য সরাসরি যোগাযোগ করুন।</p></div></section>
+<section class="section branches" id="branches"><div class="container"><div class="section-head"><div class="eyebrow">Visit our centres</div><h2>আপনার সুবিধামতো শাখায় আসুন</h2><p>ভর্তি, কোর্স ও ক্লাসের সময় সম্পর্কে জানতে নিকটবর্তী শাখায় যোগাযোগ করুন।</p></div><div class="branch-grid"><article class="branch"><div class="pin">⌖</div><div><h3>গোলাপবাগ শাখা</h3><p>গোলাপবাগ, আমতলা, শরৎপল্লী, পূর্ব বর্ধমান। শরৎপল্লী কালীমন্দিরের কাছে।</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Das+Computer+Centre+Saratpally+Golapbag+Bardhaman">মানচিত্রে দেখুন ↗</a></div></article><article class="branch"><div class="pin">⌖</div><div><h3>Nawabhat শাখা</h3><p>নওয়াবহাট, সিউরি রোড, শিব মন্দিরের বিপরীতে, পূর্ব বর্ধমান।</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Das+Computer+Centre+Nawabhat+Suri+Road+Bardhaman">মানচিত্রে দেখুন ↗</a></div></article></div></div></section>
+<section class="section" id="contact"><div class="container"><div class="contact-box"><div class="contact-main"><div class="eyebrow">Get in touch</div><h2>আপনার শেখার যাত্রা শুরু হোক আজই</h2><p>কোর্সের বিবরণ, ফি, সময়সূচি বা ভর্তি সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।</p><div class="actions"><a class="btn btn-green" href="https://wa.me/919614180080" target="_blank" rel="noopener">WhatsApp-এ যোগাযোগ ↗</a><a class="btn btn-outline" href="address(1).html">সম্পূর্ণ ঠিকানা</a></div></div><div class="contact-details"><div class="detail"><small>Phone / WhatsApp</small><strong><a href="tel:+919614180080">+91 96141 80080</a></strong></div><div class="detail"><small>Our branches</small><strong>গোলাপবাগ · Nawabhat</strong></div><div class="detail"><small>Ask us about</small><strong>কোর্স · ফি · ভর্তি · সময়সূচি</strong></div></div></div></div></section>
+</main>
+<footer><div class="footer-grid"><div><a class="footer-brand" href="#home"><img src="logo.png" alt="Das Computer Centre Logo"><span><strong>DAS COMPUTER CENTRE</strong><small>LEARN · CREATE · GROW</small></span></a><p class="footer-about">কম্পিউটার শিক্ষা ও আধুনিক ডিজিটাল দক্ষতা শেখার জন্য আপনার প্রশিক্ষণ কেন্দ্র।</p></div><div><h4>দ্রুত লিঙ্ক</h4><ul><li><a href="#about">আমাদের সম্পর্কে</a></li><li><a href="courses(1).html">কোর্সসমূহ</a></li><li><a href="gallery(1).html">গ্যালারি</a></li><li><a href="notice(1).html">নোটিস</a></li></ul></div><div><h4>শিক্ষা ও প্রশিক্ষণ</h4><ul><li><a href="courses(1).html">বেসিক কম্পিউটার</a></li><li><a href="courses(1).html">Tally ও GST</a></li><li><a href="courses(1).html">Python ও Java</a></li><li><a href="courses(1).html">AI ডিজাইন</a></li></ul></div><div><h4>যোগাযোগ</h4><ul><li><a href="tel:+919614180080">+91 96141 80080</a></li><li><a href="https://wa.me/919614180080" target="_blank" rel="noopener">WhatsApp</a></li><li>গোলাপবাগ, পূর্ব বর্ধমান</li><li>Nawabhat, সিউরি রোড</li></ul></div></div><div class="copyright"><span>© 2026 Das Computer Centre. সর্বস্বত্ব সংরক্ষিত।</span><span>শিক্ষা · দক্ষতা · আত্মবিশ্বাস</span></div></footer>
+<a class="whatsapp" href="https://wa.me/919614180080" target="_blank" rel="noopener" aria-label="WhatsApp-এ যোগাযোগ">WhatsApp ↗</a>
+<script>const menu=document.getElementById('menu'),navlinks=document.getElementById('navlinks');menu.addEventListener('click',()=>{const opened=navlinks.classList.toggle('open');menu.setAttribute('aria-expanded',String(opened));menu.textContent=opened?'×':'☰'});navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));</script>
 </body>
 </html>
