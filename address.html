@@ -1,232 +1,830 @@
-
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>আমাদের ঠিকানা | Das Computer Centre</title>
+    <title>যোগাযোগ ও ঠিকানা | Das Computer Centre</title>
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <meta name="description"
+          content="Das Computer Centre-এর গোলাপবাগ ও নবাবহাট শাখার ঠিকানা, যোগাযোগের নম্বর, Google Maps, Facebook ও WhatsApp তথ্য।">
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: #263238;
-    line-height: 1.7;
-    background: #f4f7fb;
-}
+    <meta name="theme-color" content="#102a56">
 
-header {
-    background: linear-gradient(135deg, #001f54, #003399);
-    color: white;
-    text-align: center;
-    padding: 28px 15px;
-}
+    <style>
+        :root {
+            --navy: #102a56;
+            --blue: #174ea6;
+            --light-blue: #eaf2ff;
+            --orange: #f59e0b;
+            --green: #15803d;
+            --facebook: #1877f2;
+            --text: #1f2937;
+            --muted: #64748b;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 12px 35px rgba(15, 42, 86, 0.10);
+        }
 
-nav {
-    background: #0055cc;
-    padding: 12px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 9px;
-    font-weight: bold;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-nav a:hover,
-nav .active {
-    color: yellow;
-}
+        body {
+            font-family: "Noto Sans Bengali", "Hind Siliguri",
+                         "Nirmala UI", Arial, sans-serif;
+            background: #f5f8ff;
+            color: var(--text);
+            line-height: 1.8;
+        }
 
-main {
-    max-width: 1050px;
-    margin: 30px auto;
-    padding: 0 16px;
-    min-height: 55vh;
-}
+        a {
+            text-decoration: none;
+        }
 
-h2 {
-    text-align: center;
-    color: #003399;
-    margin-bottom: 22px;
-}
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
 
-.box,
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 22px;
-    margin: 14px 0;
-    box-shadow: 0 2px 8px #0001;
-    border-top: 4px solid #0055cc;
-}
+        /* TOP STRIP */
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-}
+        .utility {
+            background: var(--navy);
+            color: white;
+            padding: 7px 0;
+            font-size: 13px;
+        }
 
-.card h3 {
-    color: #003399;
-    margin-bottom: 10px;
-}
+        .utility-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-.address {
-    margin-bottom: 12px;
-}
+        /* HEADER */
 
-.btn {
-    display: inline-block;
-    background: #0055cc;
-    color: white;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    margin-top: 10px;
-    transition: 0.3s;
-}
+        header {
+            background: white;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-.btn:hover {
-    background: #003399;
-}
+        .nav {
+            min-height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 0;
+        }
 
-footer {
-    background: #001f54;
-    color: #dbeafe;
-    text-align: center;
-    padding: 18px;
-    margin-top: 30px;
-}
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            min-width: 0;
+        }
 
-@media(max-width:600px) {
-    nav a {
-        font-size: 13px;
-        margin: 4px;
-    }
+        .brand img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
 
-    .card,
-    .box {
-        padding: 18px;
-    }
-}
-</style>
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            color: var(--navy);
+            font-size: 21px;
+            font-weight: 900;
+            line-height: 1.35;
+        }
+
+        .brand-subtitle {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 700;
+            padding: 9px 12px;
+            border-radius: 8px;
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: var(--light-blue);
+            color: var(--blue);
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                radial-gradient(circle at top right,
+                rgba(255, 255, 255, 0.17), transparent 35%),
+                linear-gradient(125deg, #102a56, #174ea6);
+
+            color: white;
+            padding: 65px 0;
+            text-align: center;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 5px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 43px);
+            line-height: 1.4;
+            margin-bottom: 14px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #e6efff;
+            font-size: 16px;
+        }
+
+        .hero-line {
+            width: 75px;
+            height: 4px;
+            background: var(--orange);
+            margin: 22px auto 0;
+            border-radius: 10px;
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 55px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(24px, 4vw, 32px);
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* BRANCH CARDS */
+
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .branch-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 42px rgba(15, 42, 86, 0.14);
+        }
+
+        .branch-header {
+            padding: 23px 25px;
+            color: white;
+            background: linear-gradient(120deg, var(--navy), var(--blue));
+        }
+
+        .branch-number {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.16);
+            padding: 3px 11px;
+            border-radius: 30px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .branch-header h3 {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .branch-header p {
+            color: #dce9ff;
+            font-size: 13px;
+            margin-top: 3px;
+        }
+
+        .branch-body {
+            padding: 25px;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 13px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .info-icon {
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: var(--light-blue);
+            border-radius: 12px;
+            font-size: 21px;
+        }
+
+        .info-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .info-content h4 {
+            color: var(--navy);
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        .info-content p {
+            color: #475569;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .branch-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        /* BUTTONS */
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            padding: 11px 17px;
+            border: none;
+            border-radius: 9px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(0.95);
+        }
+
+        .btn-map {
+            background: var(--blue);
+            color: white;
+        }
+
+        .btn-call {
+            background: var(--green);
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #073b20;
+        }
+
+        .btn-facebook {
+            background: var(--facebook);
+            color: white;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact-section {
+            padding: 0 0 60px;
+        }
+
+        .contact-panel {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 38px 25px;
+            text-align: center;
+        }
+
+        .contact-panel h2 {
+            color: var(--navy);
+            font-size: clamp(24px, 4vw, 32px);
+            margin-bottom: 10px;
+        }
+
+        .contact-panel > p {
+            max-width: 680px;
+            color: var(--muted);
+            margin: 0 auto 24px;
+        }
+
+        .phone-number {
+            color: var(--navy);
+            font-size: clamp(23px, 4vw, 32px);
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 23px;
+        }
+
+        .contact-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .contact-note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1d3a;
+            color: white;
+            padding: 28px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            font-size: 17px;
+            font-weight: 900;
+        }
+
+        .footer-inner p {
+            color: #cbd5e1;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #e2e8f0;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #fbbf24;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.13);
+            margin-top: 20px;
+            padding-top: 15px;
+            color: #cbd5e1;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .branch-grid {
+                grid-template-columns: 1fr;
+                max-width: 650px;
+                margin: auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .utility-inner {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .brand img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .brand-title {
+                font-size: 17px;
+            }
+
+            .brand-subtitle {
+                font-size: 11px;
+            }
+
+            .nav-links {
+                gap: 3px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+                padding: 7px 9px;
+            }
+
+            .hero {
+                padding: 45px 0;
+            }
+
+            .section {
+                padding: 38px 0;
+            }
+
+            .branch-header {
+                padding: 20px;
+            }
+
+            .branch-body {
+                padding: 20px;
+            }
+
+            .branch-actions .btn {
+                flex: 1 1 100%;
+            }
+
+            .contact-panel {
+                padding: 28px 18px;
+            }
+
+            .contact-actions {
+                flex-direction: column;
+            }
+
+            .contact-actions .btn {
+                width: 100%;
+                max-width: 340px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>DAS COMPUTER CENTRE</h1>
-    <p>স্থাপিত: ২০১৮ | পূর্ব বর্ধমান</p>
-</header>
-
-<nav>
-    <a href="home.html">হোম</a>
-    <a href="home.html#about">আমাদের সম্পর্কে</a>
-    <a href="courses.html">কোর্সসমূহ</a>
-    <a href="address.html" class="active">ঠিকানা</a>
-    <a href="gallery.html">গ্যালারি</a>
-    <a href="notice.html">নোটিশ</a>
-    <a href="home.html#contact">যোগাযোগ</a>
-</nav>
-
-<main>
-
-    <h2>আমাদের ঠিকানা</h2>
-
-    <div class="grid">
-
-        <!-- GOLAPBAG BRANCH -->
-
-        <section class="card">
-
-            <h3>📍 শাখা ১ — Golapbag</h3>
-
-            <p class="address">
-                <strong>দাস কম্পিউটার সেন্টার</strong><br>
-                গোলাপবাগ, আমতলা, শরৎপল্লী,<br>
-                পূর্ব বর্ধমান, পশ্চিমবঙ্গ।
-            </p>
-
-            <a
-                class="btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.google.com/maps/search/?api=1&query=Das+Computer+Centre+Golapbag+Saratpally+Bardhaman"
-            >
-                Google Maps-এ দেখুন
-            </a>
-
-        </section>
-
-
-        <!-- NAWABHAT BRANCH -->
-
-        <section class="card">
-
-            <h3>📍 শাখা ২ — Nawabhat</h3>
-
-            <p class="address">
-                <strong>দাস কম্পিউটার সেন্টার</strong><br>
-                নবাবহাট, সিউড়ি রোড,<br>
-                ১০৮ শিবমন্দিরের বিপরীতে,<br>
-                পূর্ব বর্ধমান, পশ্চিমবঙ্গ।
-            </p>
-
-            <a
-                class="btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://maps.app.goo.gl/MThqj4RyTczUwAabA"
-            >
-                Google Maps-এ দেখুন
-            </a>
-
-        </section>
-
+    <!-- TOP STRIP -->
+    <div class="utility">
+        <div class="container utility-inner">
+            <span>শিক্ষা • দক্ষতা • আত্মবিশ্বাস</span>
+            <span>Practical Computer Education · Digital Skills · Career Learning</span>
+        </div>
     </div>
 
+    <!-- HEADER -->
+    <header>
+        <div class="container nav">
 
-    <!-- CONTACT -->
+            <a class="brand" href="home.html" aria-label="Das Computer Centre Home">
+                <img src="logo.jpg" alt="Das Computer Centre Logo">
 
-    <div class="box">
+                <span class="brand-text">
+                    <span class="brand-title">DAS COMPUTER CENTRE</span>
+                    <span class="brand-subtitle">Learn Today • Lead Tomorrow</span>
+                </span>
+            </a>
 
-        <h3>📞 যোগাযোগ করুন</h3>
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="home.html">হোম</a>
+                <a href="courses.html">কোর্স</a>
+                <a href="address.html" class="active">ঠিকানা</a>
+                <a href="gallery.html">গ্যালারি</a>
+                <a href="notice.html">নোটিশ</a>
+            </nav>
 
-        <p>
-            ফোন / WhatsApp:
-            <strong>+91 9614180080</strong>
-        </p>
+        </div>
+    </header>
 
-        <a
-            class="btn"
-            href="https://wa.me/919614180080"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            WhatsApp করুন
-        </a>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
 
-    </div>
+            <span class="hero-label">CONTACT US</span>
 
-</main>
+            <h1>আমাদের সঙ্গে যোগাযোগ করুন</h1>
 
-<footer>
-    <p>Das Computer Centre © 2026 | সর্বস্বত্ব সংরক্ষিত</p>
-</footer>
+            <p>
+                আপনার কম্পিউটার শিক্ষা ও ডিজিটাল দক্ষতা অর্জনের যাত্রায়
+                আমরা আপনার পাশে আছি। ভর্তি, কোর্স এবং অন্যান্য তথ্যের জন্য
+                আমাদের সঙ্গে যোগাযোগ করুন অথবা নিকটবর্তী শাখায় আসুন।
+            </p>
+
+            <div class="hero-line"></div>
+
+        </div>
+    </section>
+
+    <!-- BRANCH ADDRESS SECTION -->
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>আমাদের শাখার ঠিকানা</h2>
+                <p>
+                    আপনার সুবিধামতো শাখায় এসে সরাসরি যোগাযোগ করতে পারেন।
+                </p>
+            </div>
+
+            <div class="branch-grid">
+
+                <!-- GOLAPBAG BRANCH -->
+                <article class="branch-card">
+
+                    <div class="branch-header">
+                        <span class="branch-number">BRANCH 01</span>
+                        <h3>গোলাপবাগ শাখা</h3>
+                        <p>Golapbag · Saratpally</p>
+                    </div>
+
+                    <div class="branch-body">
+
+                        <div class="info-row">
+                            <div class="info-icon">📍</div>
+
+                            <div class="info-content">
+                                <h4>সম্পূর্ণ ঠিকানা</h4>
+                                <p>
+                                    শরৎপল্লী, গোলাপবাগ,
+                                    শরৎপল্লী কালীমন্দিরের কাছে,
+                                    পূর্ব বর্ধমান, পশ্চিমবঙ্গ।
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-icon">📞</div>
+
+                            <div class="info-content">
+                                <h4>যোগাযোগের নম্বর</h4>
+                                <p>9614180080</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-icon">🕒</div>
+
+                            <div class="info-content">
+                                <h4>ক্লাসের দিন ও সময়</h4>
+                                <p>
+                                    শুক্রবার, শনিবার, রবিবার ও সোমবার
+                                    <br>
+                                    সকাল: ৭:০০ – ১১:৩০
+                                    <br>
+                                    বিকেল: ৩:০০ – রাত ৯:০০
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="branch-actions">
+
+                            <a class="btn btn-map"
+                               href="https://www.google.com/maps/search/?api=1&amp;query=Das+Computer+Centre+Golapbag+Saratpally+Bardhaman"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                📍 Google Maps
+                            </a>
+
+                            <a class="btn btn-call" href="tel:9614180080">
+                                📞 কল করুন
+                            </a>
+
+                        </div>
+
+                    </div>
+                </article>
+
+                <!-- NAWABHAT BRANCH -->
+                <article class="branch-card">
+
+                    <div class="branch-header">
+                        <span class="branch-number">BRANCH 02</span>
+                        <h3>নবাবহাট শাখা</h3>
+                        <p>Nawabhat · Suri Road</p>
+                    </div>
+
+                    <div class="branch-body">
+
+                        <div class="info-row">
+                            <div class="info-icon">📍</div>
+
+                            <div class="info-content">
+                                <h4>সম্পূর্ণ ঠিকানা</h4>
+                                <p>
+                                    নবাবহাট, সিউড়ি রোড,
+                                    ১০৮ শিবমন্দিরের বিপরীতে,
+                                    পূর্ব বর্ধমান, পশ্চিমবঙ্গ।
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-icon">📞</div>
+
+                            <div class="info-content">
+                                <h4>যোগাযোগের নম্বর</h4>
+                                <p>9614180080</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-icon">🕒</div>
+
+                            <div class="info-content">
+                                <h4>ক্লাসের দিন ও সময়</h4>
+                                <p>
+                                    মঙ্গলবার ও বুধবার
+                                    <br>
+                                    সকাল: ৭:০০ – ১১:৩০
+                                    <br>
+                                    বিকেল: ৩:০০ – রাত ৮:০০
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="branch-actions">
+
+                            <a class="btn btn-map"
+                               href="https://maps.app.goo.gl/MThqj4RyTczUwAabA"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                📍 Google Maps
+                            </a>
+
+                            <a class="btn btn-call" href="tel:9614180080">
+                                📞 কল করুন
+                            </a>
+
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="container">
+
+            <div class="contact-panel">
+
+                <h2>আমাদের সঙ্গে যোগাযোগ করুন</h2>
+
+                <p>
+                    কোর্সের বিস্তারিত তথ্য, ভর্তি, ফি এবং ক্লাসের সময়সূচি
+                    জানতে ফোন করুন অথবা WhatsApp-এ মেসেজ পাঠান।
+                    আমাদের Facebook পেজেও যোগাযোগ করতে পারেন।
+                </p>
+
+                <div class="phone-number">📞 9614180080</div>
+
+                <div class="contact-actions">
+
+                    <!-- CALL BUTTON -->
+                    <a class="btn btn-call" href="tel:9614180080">
+                        📞 কল করুন
+                    </a>
+
+                    <!-- WHATSAPP BUTTON -->
+                    <a class="btn btn-whatsapp"
+                       href="https://wa.me/919614180080"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        WhatsApp করুন
+                    </a>
+
+                    <!-- FACEBOOK BUTTON -->
+                    <a class="btn btn-facebook"
+                       href="https://www.facebook.com/share/1DbfN5qHUz/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        f Facebook-এ আমাদের দেখুন
+                    </a>
+
+                </div>
+
+                <p class="contact-note">
+                    নোট: কল বাটনে ক্লিক করলে আপনার ডিভাইসের ডায়ালার
+                    খুলবে এবং 9614180080 নম্বরটি দেখা যাবে।
+                    কল করার জন্য আপনাকে নিজে থেকে কল করতে হবে।
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+
+            <div class="footer-inner">
+
+                <div>
+                    <div class="footer-title">DAS COMPUTER CENTRE</div>
+                    <p>শিক্ষা • দক্ষতা • আত্মবিশ্বাস</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="home.html">হোম</a>
+                    <a href="courses.html">কোর্স</a>
+                    <a href="gallery.html">গ্যালারি</a>
+                    <a href="notice.html">নোটিশ</a>
+                    <a href="address.html">যোগাযোগ</a>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                © <span id="currentYear"></span> Das Computer Centre.
+                সর্বস্বত্ব সংরক্ষিত।
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+    </script>
 
 </body>
 </html>
