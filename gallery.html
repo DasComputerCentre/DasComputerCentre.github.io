@@ -1,1 +1,701 @@
-<!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>গ্যালারি | Das Computer Centre</title><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;color:#263238;line-height:1.7;background:#f4f7fb}header{background:linear-gradient(135deg,#001f54,#003399);color:white;text-align:center;padding:28px 15px}nav{background:#0055cc;padding:12px;text-align:center;position:sticky;top:0}nav a{color:white;text-decoration:none;display:inline-block;margin:4px 9px;font-weight:bold}nav a:hover,nav .active{color:yellow}main{max-width:1050px;margin:30px auto;padding:0 16px;min-height:55vh}h2{text-align:center;color:#003399;margin-bottom:22px}.box,.card{background:white;border-radius:10px;padding:22px;margin:14px 0;box-shadow:0 2px 8px #0001;border-top:4px solid #0055cc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.btn{display:inline-block;background:#0055cc;color:white;text-decoration:none;padding:10px 16px;border-radius:6px;margin-top:10px}footer{background:#001f54;color:#dbeafe;text-align:center;padding:18px;margin-top:30px}@media(max-width:600px){nav a{font-size:13px;margin:4px}}</style></head><body><header><h1>DAS COMPUTER CENTRE</h1><p>স্থাপিত: ২০১৮ | পূর্ব বর্ধমান</p></header><nav><a href="home.html" class="">হোম</a><a href="home.html#about" class="">আমাদের সম্পর্কে</a><a href="courses.html" class="">কোর্সসমূহ</a><a href="address.html" class="">ঠিকানা</a><a href="gallery.html" class="active">গ্যালারি</a><a href="notice.html" class="">নোটিশ</a><a href="home.html#contact" class="">যোগাযোগ</a></nav><main><h2>গ্যালারি</h2><div class="box"><p>সেন্টারের ছবি, কম্পিউটার ল্যাব, ক্লাসরুম, ছাত্রছাত্রীদের কাজ এবং পুরস্কার/অনুষ্ঠানের ছবি এখানে রাখা যাবে।</p><p>ছবি দেখাতে প্রথমে ছবিগুলি GitHub repository-তে আপলোড করতে হবে।</p></div><div class="grid"><div class="card"><h3>সেন্টারের ছবি</h3><p>এখানে সেন্টারের ছবি যোগ করুন।</p></div><div class="card"><h3>কম্পিউটার ল্যাব</h3><p>এখানে ল্যাবের ছবি যোগ করুন।</p></div><div class="card"><h3>ক্লাসরুম</h3><p>এখানে ক্লাসরুমের ছবি যোগ করুন।</p></div><div class="card"><h3>পুরস্কার ও অনুষ্ঠান</h3><p>এখানে ইভেন্টের ছবি যোগ করুন।</p></div></div></main><footer>Das Computer Centre © 2026 | সর্বস্বত্ব সংরক্ষিত</footer></body></html>
+```html
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>গ্যালারি | Das Computer Centre</title>
+
+<meta name="description"
+content="Das Computer Centre-এর গোলাপবাগ ও নবাবহাট শাখার কম্পিউটার ল্যাব, ক্লাসরুম, শিক্ষার্থীদের কাজ, পুরস্কার ও বিভিন্ন অনুষ্ঠানের ছবি দেখুন।">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #263238;
+    line-height: 1.7;
+    background: #f4f7fb;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #001f54, #003399);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 5px;
+    color: #dbeafe;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: #0055cc;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 10px #0002;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 9px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    color: #ffeb3b;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 16px;
+    min-height: 55vh;
+}
+
+/* PAGE INTRO */
+
+.page-intro {
+    background: white;
+    border-radius: 14px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 3px 12px #0000000d;
+    border-top: 5px solid #0055cc;
+    margin-bottom: 35px;
+}
+
+.page-intro h2 {
+    color: #003399;
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.page-intro p {
+    max-width: 850px;
+    margin: 0 auto 12px;
+    color: #526170;
+}
+
+.intro-highlight {
+    color: #0055cc;
+    font-weight: bold;
+}
+
+/* BRANCH SECTION */
+
+.branch-section {
+    margin: 35px 0 45px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 14px #0000000d;
+}
+
+.branch-heading {
+    border-left: 5px solid #0055cc;
+    padding-left: 15px;
+    margin-bottom: 18px;
+}
+
+.branch-heading h2 {
+    color: #003399;
+    font-size: 25px;
+}
+
+.branch-heading p {
+    color: #687787;
+    margin-top: 4px;
+}
+
+/* BRANCH BADGE */
+
+.branch-badge {
+    display: inline-block;
+    background: #e8f1ff;
+    color: #0047ab;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* IMAGE GRID */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+/* IMAGE CARD */
+
+.gallery-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5eaf2;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px #0033991c;
+}
+
+.gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    background: #eaf0f8;
+    cursor: pointer;
+    color: #526170;
+    text-align: center;
+}
+
+.gallery-caption {
+    padding: 12px;
+    text-align: center;
+}
+
+.gallery-caption h3 {
+    color: #003399;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.gallery-caption p {
+    color: #718096;
+    font-size: 13px;
+}
+
+/* CLOSING MESSAGE */
+
+.gallery-message {
+    background: linear-gradient(135deg, #eaf2ff, #f4f8ff);
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    margin: 35px 0;
+    border: 1px solid #d8e6ff;
+}
+
+.gallery-message h2 {
+    color: #003399;
+    margin-bottom: 10px;
+}
+
+.gallery-message p {
+    color: #526170;
+}
+
+/* FOOTER */
+
+footer {
+    background: #001f54;
+    color: #dbeafe;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 3px 0;
+}
+
+/* IMAGE VIEWER */
+
+.image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 12, 35, 0.93);
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.image-viewer img {
+    max-width: 95%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 38px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        padding: 8px 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 4px 6px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .page-intro {
+        padding: 22px 15px;
+    }
+
+    .page-intro h2 {
+        font-size: 24px;
+    }
+
+    .branch-section {
+        padding: 16px 12px;
+        margin: 25px 0;
+    }
+
+    .branch-heading h2 {
+        font-size: 21px;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+    .gallery-caption {
+        padding: 9px 5px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 14px;
+    }
+
+    .gallery-caption p {
+        font-size: 12px;
+    }
+
+    .image-viewer {
+        padding: 12px;
+    }
+
+    .image-viewer img {
+        max-width: 100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <h1>DAS COMPUTER CENTRE</h1>
+    <p>স্থাপিত: ২০১৮ | পূর্ব বর্ধমান</p>
+</header>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <a href="home.html">হোম</a>
+    <a href="home.html#about">আমাদের সম্পর্কে</a>
+    <a href="courses.html">কোর্সসমূহ</a>
+    <a href="address.html">ঠিকানা</a>
+    <a href="gallery.html" class="active">গ্যালারি</a>
+    <a href="notice.html">নোটিশ</a>
+    <a href="home.html#contact">যোগাযোগ</a>
+</nav>
+
+<main>
+
+    <!-- GALLERY INTRODUCTION -->
+
+    <section class="page-intro">
+
+        <h2>📸 আমাদের গ্যালারি</h2>
+
+        <p>
+            <strong>Das Computer Centre</strong>-এর শিক্ষার পরিবেশ,
+            আধুনিক কম্পিউটার প্রশিক্ষণ, শিক্ষার্থীদের সৃজনশীলতা
+            এবং সাফল্যের মুহূর্তগুলি দেখুন আমাদের ছবির গ্যালারিতে।
+        </p>
+
+        <p>
+            আমাদের <span class="intro-highlight">গোলাপবাগ</span>
+            ও <span class="intro-highlight">নবাবহাট</span>
+            শাখার বিভিন্ন কার্যক্রম, কম্পিউটার ল্যাব,
+            ক্লাসরুম এবং বিশেষ অনুষ্ঠানের ছবি এখানে তুলে ধরা হবে।
+        </p>
+
+        <p>
+            প্রতিটি ছবি আমাদের শিক্ষার পরিবেশ, ব্যবহারিক প্রশিক্ষণ
+            এবং শিক্ষার্থীদের এগিয়ে চলার গল্প তুলে ধরবে।
+        </p>
+
+    </section>
+
+
+    <!-- GOLAPBAG BRANCH -->
+
+    <section class="branch-section" id="golapbag">
+
+        <div class="branch-heading">
+
+            <span class="branch-badge">MAIN BRANCH</span>
+
+            <h2>🏫 গোলাপবাগ শাখা</h2>
+
+            <p>
+                শরৎপল্লী, গোলাপবাগ, পূর্ব বর্ধমান
+            </p>
+
+            <p>
+                আমাদের প্রধান শাখার প্রশিক্ষণ পরিবেশ,
+                কম্পিউটার ল্যাব, ক্লাসরুম এবং শিক্ষার্থীদের
+                বিভিন্ন কার্যক্রমের ছবি এখানে দেখুন।
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- GOLAPBAG IMAGE 1 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="g1.jpg"
+                    alt="গোলাপবাগ শাখার ছবি"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>আমাদের সেন্টার</h3>
+                    <p>গোলাপবাগ শাখার পরিচিতি</p>
+                </div>
+
+            </div>
+
+
+            <!-- GOLAPBAG IMAGE 2 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="g2.jpg"
+                    alt="গোলাপবাগ কম্পিউটার ল্যাব"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>কম্পিউটার ল্যাব</h3>
+                    <p>ব্যবহারিক শিক্ষার পরিবেশ</p>
+                </div>
+
+            </div>
+
+
+            <!-- GOLAPBAG IMAGE 3 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="g3.jpg"
+                    alt="গোলাপবাগ শাখার ক্লাসরুম"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>ক্লাসরুম</h3>
+                    <p>শেখা ও অনুশীলনের মুহূর্ত</p>
+                </div>
+
+            </div>
+
+
+            <!-- GOLAPBAG IMAGE 4 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="g4.jpg"
+                    alt="গোলাপবাগ শাখার অনুষ্ঠান ও শিক্ষার্থীদের কাজ"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>সাফল্য ও বিশেষ মুহূর্ত</h3>
+                    <p>শিক্ষার্থীদের কাজ ও অনুষ্ঠানের ছবি</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NAWABHAT BRANCH -->
+
+    <section class="branch-section" id="nawabhat">
+
+        <div class="branch-heading">
+
+            <span class="branch-badge">BRANCH 2</span>
+
+            <h2>💻 নবাবহাট শাখা</h2>
+
+            <p>
+                নবাবহাট, সিউড়ি রোড, শিবমন্দিরের বিপরীতে
+            </p>
+
+            <p>
+                আমাদের নবাবহাট শাখার শিক্ষার পরিবেশ,
+                কম্পিউটার প্রশিক্ষণ, শিক্ষার্থীদের অনুশীলন
+                এবং বিভিন্ন কার্যক্রমের ছবি এখানে তুলে ধরা হবে।
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- NAWABHAT IMAGE 1 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="n1.jpg"
+                    alt="নবাবহাট শাখার ছবি"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>আমাদের সেন্টার</h3>
+                    <p>নবাবহাট শাখার পরিচিতি</p>
+                </div>
+
+            </div>
+
+
+            <!-- NAWABHAT IMAGE 2 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="n2.jpg"
+                    alt="নবাবহাট কম্পিউটার ল্যাব"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>কম্পিউটার ল্যাব</h3>
+                    <p>প্রযুক্তিনির্ভর ব্যবহারিক শিক্ষা</p>
+                </div>
+
+            </div>
+
+
+            <!-- NAWABHAT IMAGE 3 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="n3.jpg"
+                    alt="নবাবহাট শাখার ক্লাসরুম"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>ক্লাসরুম</h3>
+                    <p>কম্পিউটার শেখার অভিজ্ঞতা</p>
+                </div>
+
+            </div>
+
+
+            <!-- NAWABHAT IMAGE 4 -->
+
+            <div class="gallery-card">
+
+                <img
+                    src="n4.jpg"
+                    alt="নবাবহাট শাখার শিক্ষার্থীদের কাজ ও অনুষ্ঠান"
+                    class="gallery-image"
+                    loading="lazy"
+                    onclick="openViewer(this)"
+                >
+
+                <div class="gallery-caption">
+                    <h3>শিক্ষার্থীদের সাফল্য</h3>
+                    <p>প্রজেক্ট, পুরস্কার ও বিশেষ মুহূর্ত</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLOSING MESSAGE -->
+
+    <section class="gallery-message">
+
+        <h2>🌟 শেখা থেকে সাফল্যের পথে</h2>
+
+        <p>
+            প্রতিটি নতুন দক্ষতা তৈরি করে নতুন সম্ভাবনা।
+            ব্যবহারিক শিক্ষা, নিয়মিত অনুশীলন এবং সৃজনশীলতার
+            মাধ্যমে শিক্ষার্থীদের এগিয়ে যাওয়ার যাত্রাই
+            Das Computer Centre-এর অনুপ্রেরণা।
+        </p>
+
+        <p>
+            আমাদের দুই শাখার শিক্ষার পরিবেশ ও কার্যক্রমের
+            আরও ছবি দেখতে গ্যালারিতে চোখ রাখুন।
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- IMAGE VIEWER -->
+
+<div class="image-viewer" id="imageViewer" onclick="closeViewer()">
+
+    <button
+        class="close-viewer"
+        aria-label="ছবি বন্ধ করুন"
+        onclick="closeViewer()"
+    >&times;</button>
+
+    <img id="viewerImage" src="" alt="বড় করে দেখা ছবি">
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        <strong>Das Computer Centre</strong>
+    </p>
+
+    <p>
+        শিক্ষা • দক্ষতা • আত্মবিশ্বাস
+    </p>
+
+    <p>
+        © 2026 Das Computer Centre | সর্বস্বত্ব সংরক্ষিত
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function openViewer(image) {
+
+    const viewer = document.getElementById("imageViewer");
+    const viewerImage = document.getElementById("viewerImage");
+
+    viewerImage.src = image.src;
+    viewer.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+}
+
+function closeViewer() {
+
+    document.getElementById("imageViewer").style.display = "none";
+
+    document.body.style.overflow = "auto";
+}
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeViewer();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+```
