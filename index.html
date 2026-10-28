@@ -51,6 +51,17 @@ body::before{
     font-size:36px;
     text-shadow:0 0 15px rgba(0, 255, 255, 0.6);
     letter-spacing:1px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+.header-logo{
+    width:130px;
+    height:130px;
+    object-fit:contain;
+    flex-shrink:0;
 }
 
 .header h2{
@@ -194,7 +205,8 @@ footer{
 }
 
 @media (max-width:768px){
-    .header h1{ font-size:28px; }
+    .header h1{ font-size:28px; gap:12px; flex-direction:column; }
+    .header-logo{ width:100px; height:100px; }
     .header h2{ font-size:20px; }
     .section-header h3{ font-size:17px; }
     .rules-box{ padding:18px 12px; }
@@ -209,7 +221,7 @@ footer{
 <div class="container">
 
 <div class="header">
-    <h1>💻 DAS COMPUTER CENTRE</h1>
+    <h1><img class="header-logo" src="logo.png" alt="Das Computer Centre Logo"> <span>DAS COMPUTER CENTRE</span></h1>
     <h2>দাস কম্পিউটার সেন্টারের নিয়মাবলী (Rules & Regulations)</h2>
 </div>
 
